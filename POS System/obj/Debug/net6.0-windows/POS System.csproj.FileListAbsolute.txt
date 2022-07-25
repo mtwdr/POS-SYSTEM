@@ -16,3 +16,4 @@ C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\ref\POS System.dll
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Login.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Properties.Resources.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Dashboard.resources

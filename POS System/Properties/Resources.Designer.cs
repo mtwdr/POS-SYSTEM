@@ -59,5 +59,97 @@ namespace POS_System.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _334_3341544_black_square_logo_square_point_of_sale_logo {
+            get {
+                object obj = ResourceManager.GetObject("334-3341544_black-square-logo-square-point-of-sale-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _51616930590ockkadlcba {
+            get {
+                object obj = ResourceManager.GetObject("-51616930590ockkadlcba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clipart3341544 {
+            get {
+                object obj = ResourceManager.GetObject("clipart3341544", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap e374aca61d88b5b794d4a0e2417a0254__1_ {
+            get {
+                object obj = ResourceManager.GetObject("e374aca61d88b5b794d4a0e2417a0254 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_change_password_png_icon_free_download_121684 {
+            get {
+                object obj = ResourceManager.GetObject("icon-change-password-png-icon-free-download-121684", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_password_computer_icons_liberty_locks_5b251dbf5f4ea1_8183419015291591033904 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-password-computer-icons-liberty-locks-5b251dbf5f4ea1.81834190152915910339" +
+                        "04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_icons_login_password_gesture_lock_screen_miscellaneous_silhouette_form {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-computer-icons-login-password-gesture-lock-screen-miscellaneous-s" +
+                        "ilhouette-form", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_icon_9 {
+            get {
+                object obj = ResourceManager.GetObject("point-of-sale-icon-9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sample_User_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Sample_User_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
