@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="e374aca61d88b5b794d4a0e2417a0254 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\e374aca61d88b5b794d4a0e2417a0254 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clipart3341544" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipart3341544.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="point-of-sale-icon-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\point-of-sale-icon-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,14 +127,17 @@
   <data name="kisspng-password-computer-icons-liberty-locks-5b251dbf5f4ea1.8183419015291591033904" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-password-computer-icons-liberty-locks-5b251dbf5f4ea1.8183419015291591033904.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sample_User_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sample_User_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="334-3341544_black-square-logo-square-point-of-sale-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\334-3341544_black-square-logo-square-point-of-sale-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="-51616930590ockkadlcba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\-51616930590ockkadlcba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sample_User_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sample_User_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="e374aca61d88b5b794d4a0e2417a0254 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e374aca61d88b5b794d4a0e2417a0254 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-change-password-png-icon-free-download-121684" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-change-password-png-icon-free-download-121684.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,7 +145,7 @@
   <data name="png-transparent-computer-icons-login-password-gesture-lock-screen-miscellaneous-silhouette-form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-computer-icons-login-password-gesture-lock-screen-miscellaneous-silhouette-form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clipart3341544" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clipart3341544.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle-dashed-4-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle-dashed-4-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

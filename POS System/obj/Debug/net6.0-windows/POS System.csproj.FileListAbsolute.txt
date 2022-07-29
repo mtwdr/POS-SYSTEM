@@ -17,3 +17,10 @@ C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\ref
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Login.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Properties.Resources.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Dashboard.resources
+C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.csproj.CopyComplete
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CashRegister.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Home.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Inventory.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Orders.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Users.resources

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "f5ErjIA9YzcR5tJ9uihNSBX9tZLGBNIY5RdALQkQIZve2PQD6FVm0p18j9iCbRYQ67qw4YcIMEImpcDsRtcl4g==",
+  "dgSpecHash": "BSLo/EVZq0f0jyRq9Fa4hkUF5aCVrGnfsKlUsTteWwzyEOeDHeBNrROe1ACkTahe0LJUwIFwuOrAEr9/H2LmuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\POS System.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Matthew\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512"
+  ],
   "logs": []
 }

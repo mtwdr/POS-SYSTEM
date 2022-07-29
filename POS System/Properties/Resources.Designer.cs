@@ -83,6 +83,16 @@ namespace POS_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circle_dashed_4_512 {
+            get {
+                object obj = ResourceManager.GetObject("circle-dashed-4-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipart3341544 {
             get {
                 object obj = ResourceManager.GetObject("clipart3341544", resourceCulture);
