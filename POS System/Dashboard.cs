@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FontAwesome.Sharp;
+﻿using System.Runtime.InteropServices;
 
 namespace POS_System
 {
@@ -56,7 +46,6 @@ namespace POS_System
         private void cashBtn_Click(object sender, EventArgs e)
         {
             labelTitle.Text = "Cash Register";
-            panelTitle.BackColor = Color.FromArgb(56, 54, 122);
 
             OpenChildForm(new Forms.CashRegister(), sender);
             closeForm.Visible = true;
@@ -65,7 +54,6 @@ namespace POS_System
         private void orderBtn_Click(object sender, EventArgs e)
         {
             labelTitle.Text = "Orders";
-            panelTitle.BackColor = Color.FromArgb(56, 54, 122);
 
             OpenChildForm(new Forms.Orders(), sender);
             closeForm.Visible = true;
@@ -74,7 +62,6 @@ namespace POS_System
         private void inventoryBtn_Click(object sender, EventArgs e)
         {
             labelTitle.Text = "Inventory";
-            panelTitle.BackColor = Color.FromArgb(56, 54, 122);
 
             OpenChildForm(new Forms.Inventory(), sender);
             closeForm.Visible = true;
@@ -83,20 +70,31 @@ namespace POS_System
         private void usersBtn_Click(object sender, EventArgs e)
         {
             labelTitle.Text = "Users";
-            panelTitle.BackColor = Color.FromArgb(56, 54, 122);
 
             OpenChildForm(new Forms.Users(), sender);
             closeForm.Visible = true;
 
         }
 
+        private void clientsBtn_Click(object sender, EventArgs e)
+        {
+            labelTitle.Text = "Clients";
+
+            OpenChildForm(new Forms.Clients(), sender);
+            closeForm.Visible = true;
+        }
+
         private void imgHome_Click(object sender, EventArgs e)
         {
             labelTitle.Text = "Home";
-            panelTitle.BackColor = Color.FromArgb(26, 25, 62);
 
             OpenChildForm(new Forms.Home(), sender);
             closeForm.Visible = true;
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void closeForm_Click(object sender, EventArgs e)
@@ -128,5 +126,7 @@ namespace POS_System
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }

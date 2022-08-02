@@ -7,6 +7,12 @@
     <Compile Update="Forms\CashRegister.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\CreateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +20,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\SearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Users.cs">

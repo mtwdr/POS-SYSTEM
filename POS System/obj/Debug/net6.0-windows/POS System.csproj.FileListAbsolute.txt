@@ -24,3 +24,8 @@ C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Inventory.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Orders.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Users.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Clients.resources
+C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\Tiger.Clock.dll
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateClient.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchClient.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateClient.resources

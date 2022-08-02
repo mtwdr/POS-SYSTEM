@@ -43,6 +43,10 @@
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.1.1, )"
+            },
+            "Tiger.Clock": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [

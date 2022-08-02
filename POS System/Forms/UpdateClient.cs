@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace POS_System.Forms
 {
-    public partial class Users : Form
+    public partial class UpdateClient : Form
     {
-        String stdDetails = "{0, -20}{1, -20}{2, -20}{3, -20}{4, -20}{5, -20}";
-
-        public Users()
+        public UpdateClient()
         {
             InitializeComponent();
         }
 
-        private void Users_Load(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
-            usersListBox.Items.Add(String.Format(stdDetails, "ID", "Surname", "First Name", "Password", "Employee No", "User Type"));
+            this.Close();
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

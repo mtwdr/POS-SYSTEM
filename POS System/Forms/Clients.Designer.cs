@@ -1,6 +1,6 @@
 ﻿namespace POS_System.Forms
 {
-    partial class Users
+    partial class Clients
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FontAwesome.Sharp.IconButton deleteClientBtn;
             FontAwesome.Sharp.IconButton updateClientBtn;
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.usersListBox = new System.Windows.Forms.ListBox();
+            FontAwesome.Sharp.IconButton deleteClientBtn;
             this.menuBar = new System.Windows.Forms.Panel();
             this.searchClientBtn = new FontAwesome.Sharp.IconButton();
             this.createClientBtn = new FontAwesome.Sharp.IconButton();
-            deleteClientBtn = new FontAwesome.Sharp.IconButton();
+            this.clientsPanel = new System.Windows.Forms.Panel();
+            this.clientListBox = new System.Windows.Forms.ListBox();
             updateClientBtn = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
+            deleteClientBtn = new FontAwesome.Sharp.IconButton();
             this.menuBar.SuspendLayout();
+            this.clientsPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // deleteClientBtn
-            // 
-            deleteClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            deleteClientBtn.FlatAppearance.BorderSize = 0;
-            deleteClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            deleteClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            deleteClientBtn.ForeColor = System.Drawing.Color.White;
-            deleteClientBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            deleteClientBtn.IconColor = System.Drawing.Color.White;
-            deleteClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            deleteClientBtn.Location = new System.Drawing.Point(285, 0);
-            deleteClientBtn.Name = "deleteClientBtn";
-            deleteClientBtn.Size = new System.Drawing.Size(95, 112);
-            deleteClientBtn.TabIndex = 3;
-            deleteClientBtn.Text = "Delete User";
-            deleteClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            deleteClientBtn.UseVisualStyleBackColor = true;
             // 
             // updateClientBtn
             // 
@@ -73,30 +55,29 @@
             updateClientBtn.Name = "updateClientBtn";
             updateClientBtn.Size = new System.Drawing.Size(95, 112);
             updateClientBtn.TabIndex = 2;
-            updateClientBtn.Text = "Update User";
+            updateClientBtn.Text = "Update Client";
             updateClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             updateClientBtn.UseVisualStyleBackColor = true;
+            updateClientBtn.Click += new System.EventHandler(this.updateClientBtn_Click);
             // 
-            // panel1
+            // deleteClientBtn
             // 
-            this.panel1.Controls.Add(this.usersListBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(1044, 542);
-            this.panel1.TabIndex = 6;
-            // 
-            // usersListBox
-            // 
-            this.usersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersListBox.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usersListBox.FormattingEnabled = true;
-            this.usersListBox.ItemHeight = 24;
-            this.usersListBox.Location = new System.Drawing.Point(10, 10);
-            this.usersListBox.Name = "usersListBox";
-            this.usersListBox.Size = new System.Drawing.Size(1024, 522);
-            this.usersListBox.TabIndex = 0;
+            deleteClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            deleteClientBtn.FlatAppearance.BorderSize = 0;
+            deleteClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            deleteClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            deleteClientBtn.ForeColor = System.Drawing.Color.White;
+            deleteClientBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
+            deleteClientBtn.IconColor = System.Drawing.Color.White;
+            deleteClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            deleteClientBtn.Location = new System.Drawing.Point(285, 0);
+            deleteClientBtn.Name = "deleteClientBtn";
+            deleteClientBtn.Size = new System.Drawing.Size(95, 112);
+            deleteClientBtn.TabIndex = 3;
+            deleteClientBtn.Text = "Delete Client";
+            deleteClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            deleteClientBtn.UseVisualStyleBackColor = true;
+            deleteClientBtn.Click += new System.EventHandler(this.deleteClientBtn_Click);
             // 
             // menuBar
             // 
@@ -109,7 +90,7 @@
             this.menuBar.Location = new System.Drawing.Point(0, 542);
             this.menuBar.Name = "menuBar";
             this.menuBar.Size = new System.Drawing.Size(1044, 112);
-            this.menuBar.TabIndex = 5;
+            this.menuBar.TabIndex = 3;
             // 
             // searchClientBtn
             // 
@@ -125,9 +106,10 @@
             this.searchClientBtn.Name = "searchClientBtn";
             this.searchClientBtn.Size = new System.Drawing.Size(95, 112);
             this.searchClientBtn.TabIndex = 1;
-            this.searchClientBtn.Text = "Search User";
+            this.searchClientBtn.Text = "Search Client";
             this.searchClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.searchClientBtn.UseVisualStyleBackColor = true;
+            this.searchClientBtn.Click += new System.EventHandler(this.searchClientBtn_Click);
             // 
             // createClientBtn
             // 
@@ -136,39 +118,60 @@
             this.createClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.createClientBtn.ForeColor = System.Drawing.Color.White;
-            this.createClientBtn.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.createClientBtn.IconChar = FontAwesome.Sharp.IconChar.PersonCirclePlus;
             this.createClientBtn.IconColor = System.Drawing.Color.White;
             this.createClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.createClientBtn.Location = new System.Drawing.Point(0, 0);
             this.createClientBtn.Name = "createClientBtn";
             this.createClientBtn.Size = new System.Drawing.Size(95, 112);
             this.createClientBtn.TabIndex = 0;
-            this.createClientBtn.Text = "Create New User";
+            this.createClientBtn.Text = "Create New Client";
             this.createClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.createClientBtn.UseVisualStyleBackColor = true;
+            this.createClientBtn.Click += new System.EventHandler(this.createClientBtn_Click);
             // 
-            // Users
+            // clientsPanel
+            // 
+            this.clientsPanel.Controls.Add(this.clientListBox);
+            this.clientsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientsPanel.Location = new System.Drawing.Point(0, 0);
+            this.clientsPanel.Name = "clientsPanel";
+            this.clientsPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.clientsPanel.Size = new System.Drawing.Size(1044, 542);
+            this.clientsPanel.TabIndex = 4;
+            // 
+            // clientListBox
+            // 
+            this.clientListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientListBox.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clientListBox.FormattingEnabled = true;
+            this.clientListBox.ItemHeight = 24;
+            this.clientListBox.Location = new System.Drawing.Point(10, 10);
+            this.clientListBox.Name = "clientListBox";
+            this.clientListBox.Size = new System.Drawing.Size(1024, 522);
+            this.clientListBox.TabIndex = 0;
+            // 
+            // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 654);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.clientsPanel);
             this.Controls.Add(this.menuBar);
-            this.Name = "Users";
-            this.Text = "Users";
-            this.Load += new System.EventHandler(this.Users_Load);
-            this.panel1.ResumeLayout(false);
+            this.Name = "Clients";
+            this.Text = "Clients";
+            this.Load += new System.EventHandler(this.Clients_Load);
             this.menuBar.ResumeLayout(false);
+            this.clientsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Panel panel1;
-        private ListBox usersListBox;
         private Panel menuBar;
-        private FontAwesome.Sharp.IconButton searchClientBtn;
         private FontAwesome.Sharp.IconButton createClientBtn;
+        private FontAwesome.Sharp.IconButton searchClientBtn;
+        private Panel clientsPanel;
+        private ListBox clientListBox;
     }
 }

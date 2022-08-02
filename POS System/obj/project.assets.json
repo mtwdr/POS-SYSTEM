@@ -13,6 +13,15 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App"
         ]
+      },
+      "Tiger.Clock/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Tiger.Clock.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Tiger.Clock.dll": {}
+        }
       }
     }
   },
@@ -34,11 +43,26 @@
         "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
         "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
+    },
+    "Tiger.Clock/2.0.0": {
+      "sha512": "Rfpu8UsWR4/0Vtr+w4qsLgYdw7DMESte10qrLIFFz0g/dSLTvwYM0Av7ZE0eD1LX8fMmfzcMyGgh2EbnjqH2Rw==",
+      "type": "package",
+      "path": "tiger.clock/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/Tiger.Clock.dll",
+        "lib/netstandard2.1/Tiger.Clock.xml",
+        "tiger.clock.2.0.0.nupkg.sha512",
+        "tiger.clock.nuspec",
+        "tiger_logo.png"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "FontAwesome.Sharp >= 6.1.1"
+      "FontAwesome.Sharp >= 6.1.1",
+      "Tiger.Clock >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -83,6 +107,10 @@
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[6.1.1, )"
+          },
+          "Tiger.Clock": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         },
         "imports": [

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BSLo/EVZq0f0jyRq9Fa4hkUF5aCVrGnfsKlUsTteWwzyEOeDHeBNrROe1ACkTahe0LJUwIFwuOrAEr9/H2LmuA==",
+  "dgSpecHash": "VcQt18tOTGz+udWHySMopScVOSEszSYhRGeQgSMNt43gnGGpZfBLsG7/k5354ZUtfIQp+KsiDiDvAQ6YZRUAew==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\POS System.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Matthew\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512"
+    "C:\\Users\\Matthew\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512",
+    "C:\\Users\\Matthew\\.nuget\\packages\\tiger.clock\\2.0.0\\tiger.clock.2.0.0.nupkg.sha512"
   ],
   "logs": []
 }
