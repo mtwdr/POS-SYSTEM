@@ -217,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(409, 500);
             this.Name = "UpdateClient";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdateClient";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

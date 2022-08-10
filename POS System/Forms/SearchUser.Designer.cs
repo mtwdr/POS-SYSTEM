@@ -1,6 +1,6 @@
 ﻿namespace POS_System.Forms
 {
-    partial class SearchClient
+    partial class SearchUser
     {
         /// <summary>
         /// Required designer variable.
@@ -45,11 +45,10 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.searchBtn);
             this.panel1.Controls.Add(this.backBtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(410, 184);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
             // 
             // panel2
             // 
@@ -66,16 +65,12 @@
             // 
             this.searchBy.FormattingEnabled = true;
             this.searchBy.Items.AddRange(new object[] {
-            "Last Name",
-            "First Name",
-            "Company",
-            "Telephone",
-            "Email"});
+            "ID",
+            "Employee No."});
             this.searchBy.Location = new System.Drawing.Point(105, 11);
             this.searchBy.Name = "searchBy";
             this.searchBy.Size = new System.Drawing.Size(257, 23);
             this.searchBy.TabIndex = 10;
-            this.searchBy.SelectedIndexChanged += new System.EventHandler(this.searchBy_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -131,7 +126,7 @@
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // SearchClient
+            // SearchUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,9 +134,9 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(410, 184);
-            this.Name = "SearchClient";
+            this.Name = "SearchUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SearchClient";
+            this.Text = "SearchUser";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -153,11 +148,11 @@
 
         private Panel panel1;
         private Panel panel2;
+        private ComboBox searchBy;
         private Label label2;
         private TextBox searchInput;
         private Label label1;
         private Button searchBtn;
         private Button backBtn;
-        private ComboBox searchBy;
     }
 }

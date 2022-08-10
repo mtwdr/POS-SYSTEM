@@ -28,18 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FontAwesome.Sharp.IconButton deleteClientBtn;
-            FontAwesome.Sharp.IconButton updateClientBtn;
+            FontAwesome.Sharp.IconButton deleteProductBtn;
+            FontAwesome.Sharp.IconButton updateProductBtn;
             this.panel1 = new System.Windows.Forms.Panel();
             this.inventoryListBox = new System.Windows.Forms.ListBox();
             this.menuBar = new System.Windows.Forms.Panel();
-            this.searchClientBtn = new FontAwesome.Sharp.IconButton();
-            this.createClientBtn = new FontAwesome.Sharp.IconButton();
-            deleteClientBtn = new FontAwesome.Sharp.IconButton();
-            updateClientBtn = new FontAwesome.Sharp.IconButton();
+            this.searchProductBtn = new FontAwesome.Sharp.IconButton();
+            this.createProductBtn = new FontAwesome.Sharp.IconButton();
+            deleteProductBtn = new FontAwesome.Sharp.IconButton();
+            updateProductBtn = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // deleteProductBtn
+            // 
+            deleteProductBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            deleteProductBtn.FlatAppearance.BorderSize = 0;
+            deleteProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            deleteProductBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            deleteProductBtn.ForeColor = System.Drawing.Color.White;
+            deleteProductBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
+            deleteProductBtn.IconColor = System.Drawing.Color.White;
+            deleteProductBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            deleteProductBtn.Location = new System.Drawing.Point(285, 0);
+            deleteProductBtn.Name = "deleteProductBtn";
+            deleteProductBtn.Size = new System.Drawing.Size(95, 112);
+            deleteProductBtn.TabIndex = 3;
+            deleteProductBtn.Text = "Delete Product";
+            deleteProductBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            deleteProductBtn.UseVisualStyleBackColor = true;
+            deleteProductBtn.Click += new System.EventHandler(this.deleteProductBtn_Click);
+            // 
+            // updateProductBtn
+            // 
+            updateProductBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            updateProductBtn.FlatAppearance.BorderSize = 0;
+            updateProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            updateProductBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            updateProductBtn.ForeColor = System.Drawing.Color.White;
+            updateProductBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            updateProductBtn.IconColor = System.Drawing.Color.White;
+            updateProductBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            updateProductBtn.Location = new System.Drawing.Point(190, 0);
+            updateProductBtn.Name = "updateProductBtn";
+            updateProductBtn.Size = new System.Drawing.Size(95, 112);
+            updateProductBtn.TabIndex = 2;
+            updateProductBtn.Text = "Update Product";
+            updateProductBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            updateProductBtn.UseVisualStyleBackColor = true;
+            updateProductBtn.Click += new System.EventHandler(this.updateProductBtn_Click);
             // 
             // panel1
             // 
@@ -65,87 +103,53 @@
             // menuBar
             // 
             this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(79)))));
-            this.menuBar.Controls.Add(deleteClientBtn);
-            this.menuBar.Controls.Add(updateClientBtn);
-            this.menuBar.Controls.Add(this.searchClientBtn);
-            this.menuBar.Controls.Add(this.createClientBtn);
+            this.menuBar.Controls.Add(deleteProductBtn);
+            this.menuBar.Controls.Add(updateProductBtn);
+            this.menuBar.Controls.Add(this.searchProductBtn);
+            this.menuBar.Controls.Add(this.createProductBtn);
             this.menuBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuBar.Location = new System.Drawing.Point(0, 542);
             this.menuBar.Name = "menuBar";
             this.menuBar.Size = new System.Drawing.Size(1044, 112);
             this.menuBar.TabIndex = 5;
             // 
-            // deleteClientBtn
+            // searchProductBtn
             // 
-            deleteClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            deleteClientBtn.FlatAppearance.BorderSize = 0;
-            deleteClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            deleteClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            deleteClientBtn.ForeColor = System.Drawing.Color.White;
-            deleteClientBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            deleteClientBtn.IconColor = System.Drawing.Color.White;
-            deleteClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            deleteClientBtn.Location = new System.Drawing.Point(285, 0);
-            deleteClientBtn.Name = "deleteClientBtn";
-            deleteClientBtn.Size = new System.Drawing.Size(95, 112);
-            deleteClientBtn.TabIndex = 3;
-            deleteClientBtn.Text = "Delete Product";
-            deleteClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            deleteClientBtn.UseVisualStyleBackColor = true;
+            this.searchProductBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.searchProductBtn.FlatAppearance.BorderSize = 0;
+            this.searchProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchProductBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchProductBtn.ForeColor = System.Drawing.Color.White;
+            this.searchProductBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchProductBtn.IconColor = System.Drawing.Color.White;
+            this.searchProductBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchProductBtn.Location = new System.Drawing.Point(95, 0);
+            this.searchProductBtn.Name = "searchProductBtn";
+            this.searchProductBtn.Size = new System.Drawing.Size(95, 112);
+            this.searchProductBtn.TabIndex = 1;
+            this.searchProductBtn.Text = "Search Product";
+            this.searchProductBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.searchProductBtn.UseVisualStyleBackColor = true;
+            this.searchProductBtn.Click += new System.EventHandler(this.searchProductBtn_Click);
             // 
-            // updateClientBtn
+            // createProductBtn
             // 
-            updateClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            updateClientBtn.FlatAppearance.BorderSize = 0;
-            updateClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            updateClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            updateClientBtn.ForeColor = System.Drawing.Color.White;
-            updateClientBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            updateClientBtn.IconColor = System.Drawing.Color.White;
-            updateClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            updateClientBtn.Location = new System.Drawing.Point(190, 0);
-            updateClientBtn.Name = "updateClientBtn";
-            updateClientBtn.Size = new System.Drawing.Size(95, 112);
-            updateClientBtn.TabIndex = 2;
-            updateClientBtn.Text = "Update Product";
-            updateClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            updateClientBtn.UseVisualStyleBackColor = true;
-            // 
-            // searchClientBtn
-            // 
-            this.searchClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.searchClientBtn.FlatAppearance.BorderSize = 0;
-            this.searchClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchClientBtn.ForeColor = System.Drawing.Color.White;
-            this.searchClientBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchClientBtn.IconColor = System.Drawing.Color.White;
-            this.searchClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchClientBtn.Location = new System.Drawing.Point(95, 0);
-            this.searchClientBtn.Name = "searchClientBtn";
-            this.searchClientBtn.Size = new System.Drawing.Size(95, 112);
-            this.searchClientBtn.TabIndex = 1;
-            this.searchClientBtn.Text = "Search Product";
-            this.searchClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.searchClientBtn.UseVisualStyleBackColor = true;
-            // 
-            // createClientBtn
-            // 
-            this.createClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.createClientBtn.FlatAppearance.BorderSize = 0;
-            this.createClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createClientBtn.ForeColor = System.Drawing.Color.White;
-            this.createClientBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.createClientBtn.IconColor = System.Drawing.Color.White;
-            this.createClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.createClientBtn.Location = new System.Drawing.Point(0, 0);
-            this.createClientBtn.Name = "createClientBtn";
-            this.createClientBtn.Size = new System.Drawing.Size(95, 112);
-            this.createClientBtn.TabIndex = 0;
-            this.createClientBtn.Text = "Add Product";
-            this.createClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.createClientBtn.UseVisualStyleBackColor = true;
+            this.createProductBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.createProductBtn.FlatAppearance.BorderSize = 0;
+            this.createProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createProductBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createProductBtn.ForeColor = System.Drawing.Color.White;
+            this.createProductBtn.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.createProductBtn.IconColor = System.Drawing.Color.White;
+            this.createProductBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.createProductBtn.Location = new System.Drawing.Point(0, 0);
+            this.createProductBtn.Name = "createProductBtn";
+            this.createProductBtn.Size = new System.Drawing.Size(95, 112);
+            this.createProductBtn.TabIndex = 0;
+            this.createProductBtn.Text = "Add Product";
+            this.createProductBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.createProductBtn.UseVisualStyleBackColor = true;
+            this.createProductBtn.Click += new System.EventHandler(this.createProductBtn_Click);
             // 
             // Inventory
             // 
@@ -168,7 +172,7 @@
         private Panel panel1;
         private ListBox inventoryListBox;
         private Panel menuBar;
-        private FontAwesome.Sharp.IconButton searchClientBtn;
-        private FontAwesome.Sharp.IconButton createClientBtn;
+        private FontAwesome.Sharp.IconButton searchProductBtn;
+        private FontAwesome.Sharp.IconButton createProductBtn;
     }
 }

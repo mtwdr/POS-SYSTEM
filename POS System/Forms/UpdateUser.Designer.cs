@@ -1,6 +1,6 @@
 ﻿namespace POS_System.Forms
 {
-    partial class CreateClient
+    partial class UpdateUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,51 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.emailInput = new System.Windows.Forms.TextBox();
+            this.userTypeInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.telephoneInput = new System.Windows.Forms.TextBox();
+            this.employeeNoInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.addressInput = new System.Windows.Forms.TextBox();
+            this.passwordInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.companyInput = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.firstnameInput = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lastnameInput = new System.Windows.Forms.TextBox();
-            this.createBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.IDInput = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.updateBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.createBtn);
-            this.panel1.Controls.Add(this.backBtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 500);
-            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.emailInput);
+            this.panel2.Controls.Add(this.userTypeInput);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.telephoneInput);
+            this.panel2.Controls.Add(this.employeeNoInput);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.addressInput);
+            this.panel2.Controls.Add(this.passwordInput);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.companyInput);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.firstnameInput);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lastnameInput);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.IDInput);
             this.panel2.Location = new System.Drawing.Point(12, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(376, 394);
@@ -82,117 +71,127 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(44, 153);
+            this.label6.Location = new System.Drawing.Point(34, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 21);
+            this.label6.Size = new System.Drawing.Size(83, 21);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Email";
+            this.label6.Text = "User Type";
             // 
-            // emailInput
+            // userTypeInput
             // 
-            this.emailInput.Location = new System.Drawing.Point(105, 153);
-            this.emailInput.Name = "emailInput";
-            this.emailInput.Size = new System.Drawing.Size(257, 23);
-            this.emailInput.TabIndex = 15;
+            this.userTypeInput.Location = new System.Drawing.Point(117, 153);
+            this.userTypeInput.Name = "userTypeInput";
+            this.userTypeInput.Size = new System.Drawing.Size(257, 23);
+            this.userTypeInput.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(7, 122);
+            this.label5.Location = new System.Drawing.Point(5, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 21);
+            this.label5.Size = new System.Drawing.Size(112, 21);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Telephone";
+            this.label5.Text = "Employee No";
             // 
-            // telephoneInput
+            // employeeNoInput
             // 
-            this.telephoneInput.Location = new System.Drawing.Point(105, 124);
-            this.telephoneInput.Name = "telephoneInput";
-            this.telephoneInput.Size = new System.Drawing.Size(257, 23);
-            this.telephoneInput.TabIndex = 13;
+            this.employeeNoInput.Location = new System.Drawing.Point(117, 124);
+            this.employeeNoInput.Name = "employeeNoInput";
+            this.employeeNoInput.Size = new System.Drawing.Size(257, 23);
+            this.employeeNoInput.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(23, 95);
+            this.label4.Location = new System.Drawing.Point(34, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 21);
+            this.label4.Size = new System.Drawing.Size(82, 21);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Address";
+            this.label4.Text = "Password";
             // 
-            // addressInput
+            // passwordInput
             // 
-            this.addressInput.Location = new System.Drawing.Point(105, 95);
-            this.addressInput.Name = "addressInput";
-            this.addressInput.Size = new System.Drawing.Size(257, 23);
-            this.addressInput.TabIndex = 11;
+            this.passwordInput.Location = new System.Drawing.Point(117, 95);
+            this.passwordInput.Name = "passwordInput";
+            this.passwordInput.Size = new System.Drawing.Size(257, 23);
+            this.passwordInput.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(7, 67);
+            this.label3.Location = new System.Drawing.Point(25, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 21);
+            this.label3.Size = new System.Drawing.Size(91, 21);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Company";
+            this.label3.Text = "First Name";
             // 
-            // companyInput
+            // firstnameInput
             // 
-            this.companyInput.Location = new System.Drawing.Point(105, 67);
-            this.companyInput.Name = "companyInput";
-            this.companyInput.Size = new System.Drawing.Size(257, 23);
-            this.companyInput.TabIndex = 9;
+            this.firstnameInput.Location = new System.Drawing.Point(117, 67);
+            this.firstnameInput.Name = "firstnameInput";
+            this.firstnameInput.Size = new System.Drawing.Size(257, 23);
+            this.firstnameInput.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(8, 38);
+            this.label2.Location = new System.Drawing.Point(23, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 21);
+            this.label2.Size = new System.Drawing.Size(93, 21);
             this.label2.TabIndex = 8;
-            this.label2.Text = "First Name";
+            this.label2.Text = "Last Name";
             // 
-            // firstnameInput
+            // lastnameInput
             // 
-            this.firstnameInput.Location = new System.Drawing.Point(105, 38);
-            this.firstnameInput.Name = "firstnameInput";
-            this.firstnameInput.Size = new System.Drawing.Size(257, 23);
-            this.firstnameInput.TabIndex = 7;
+            this.lastnameInput.Location = new System.Drawing.Point(117, 38);
+            this.lastnameInput.Name = "lastnameInput";
+            this.lastnameInput.Size = new System.Drawing.Size(257, 23);
+            this.lastnameInput.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Location = new System.Drawing.Point(88, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 21);
+            this.label1.Size = new System.Drawing.Size(27, 21);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Last Name";
+            this.label1.Text = "ID";
             // 
-            // lastnameInput
+            // IDInput
             // 
-            this.lastnameInput.Location = new System.Drawing.Point(105, 9);
-            this.lastnameInput.Name = "lastnameInput";
-            this.lastnameInput.Size = new System.Drawing.Size(257, 23);
-            this.lastnameInput.TabIndex = 0;
+            this.IDInput.Location = new System.Drawing.Point(117, 9);
+            this.IDInput.Name = "IDInput";
+            this.IDInput.Size = new System.Drawing.Size(257, 23);
+            this.IDInput.TabIndex = 0;
             // 
-            // createBtn
+            // panel1
             // 
-            this.createBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.createBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.createBtn.Location = new System.Drawing.Point(293, 453);
-            this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(95, 35);
-            this.createBtn.TabIndex = 8;
-            this.createBtn.Text = "Create";
-            this.createBtn.UseVisualStyleBackColor = false;
-            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.updateBtn);
+            this.panel1.Controls.Add(this.backBtn);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(406, 496);
+            this.panel1.TabIndex = 3;
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.updateBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.updateBtn.Location = new System.Drawing.Point(293, 453);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(95, 35);
+            this.updateBtn.TabIndex = 8;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // backBtn
             // 
@@ -208,7 +207,7 @@
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
-            // CreateClient
+            // UpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,33 +215,33 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(409, 500);
-            this.Name = "CreateClient";
+            this.Name = "UpdateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "CreateClient";
-            this.panel1.ResumeLayout(false);
+            this.Text = "UpdateUser";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
-        private Button createBtn;
-        private Button backBtn;
         private Panel panel2;
-        private Label label1;
-        private TextBox lastnameInput;
         private Label label6;
-        private TextBox emailInput;
+        private TextBox userTypeInput;
         private Label label5;
-        private TextBox telephoneInput;
+        private TextBox employeeNoInput;
         private Label label4;
-        private TextBox addressInput;
+        private TextBox passwordInput;
         private Label label3;
-        private TextBox companyInput;
-        private Label label2;
         private TextBox firstnameInput;
+        private Label label2;
+        private TextBox lastnameInput;
+        private Label label1;
+        private TextBox IDInput;
+        private Panel panel1;
+        private Button updateBtn;
+        private Button backBtn;
     }
 }

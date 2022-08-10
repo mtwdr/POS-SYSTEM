@@ -94,7 +94,9 @@ namespace POS_System
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         private void closeForm_Click(object sender, EventArgs e)

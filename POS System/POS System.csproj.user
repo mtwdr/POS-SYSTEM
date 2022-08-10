@@ -13,6 +13,12 @@
     <Compile Update="Forms\CreateClient.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\CreateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -25,7 +31,19 @@
     <Compile Update="Forms\SearchClient.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\SearchProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\SearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Users.cs">

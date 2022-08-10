@@ -21,7 +21,30 @@ namespace POS_System.Forms
 
         private void Users_Load(object sender, EventArgs e)
         {
-            usersListBox.Items.Add(String.Format(stdDetails, "ID", "Surname", "First Name", "Password", "Employee No", "User Type"));
+            usersListBox.Items.Add(String.Format(stdDetails, "ID", "Last Name", "First Name", "Password", "Employee No", "User Type"));
+        }
+
+        private void createUserBtn_Click(object sender, EventArgs e)
+        {
+            CreateUser createUser = new CreateUser();
+            createUser.ShowDialog();
+        }
+
+        private void searchUserBtn_Click(object sender, EventArgs e)
+        {
+            SearchUser searchUser = new SearchUser();
+            searchUser.ShowDialog();
+        }
+
+        private void updateUserBtn_Click(object sender, EventArgs e)
+        {
+            UpdateUser updateUser = new UpdateUser();
+            updateUser.ShowDialog();
+        }
+        
+        private void deleteUserBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

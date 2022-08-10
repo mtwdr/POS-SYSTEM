@@ -28,54 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FontAwesome.Sharp.IconButton deleteClientBtn;
-            FontAwesome.Sharp.IconButton updateClientBtn;
+            FontAwesome.Sharp.IconButton deleteUserBtn;
+            FontAwesome.Sharp.IconButton updateUserBtn;
             this.panel1 = new System.Windows.Forms.Panel();
             this.usersListBox = new System.Windows.Forms.ListBox();
             this.menuBar = new System.Windows.Forms.Panel();
-            this.searchClientBtn = new FontAwesome.Sharp.IconButton();
-            this.createClientBtn = new FontAwesome.Sharp.IconButton();
-            deleteClientBtn = new FontAwesome.Sharp.IconButton();
-            updateClientBtn = new FontAwesome.Sharp.IconButton();
+            this.searchUserBtn = new FontAwesome.Sharp.IconButton();
+            this.createUserBtn = new FontAwesome.Sharp.IconButton();
+            deleteUserBtn = new FontAwesome.Sharp.IconButton();
+            updateUserBtn = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // deleteClientBtn
+            // deleteUserBtn
             // 
-            deleteClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            deleteClientBtn.FlatAppearance.BorderSize = 0;
-            deleteClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            deleteClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            deleteClientBtn.ForeColor = System.Drawing.Color.White;
-            deleteClientBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            deleteClientBtn.IconColor = System.Drawing.Color.White;
-            deleteClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            deleteClientBtn.Location = new System.Drawing.Point(285, 0);
-            deleteClientBtn.Name = "deleteClientBtn";
-            deleteClientBtn.Size = new System.Drawing.Size(95, 112);
-            deleteClientBtn.TabIndex = 3;
-            deleteClientBtn.Text = "Delete User";
-            deleteClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            deleteClientBtn.UseVisualStyleBackColor = true;
+            deleteUserBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            deleteUserBtn.FlatAppearance.BorderSize = 0;
+            deleteUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            deleteUserBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            deleteUserBtn.ForeColor = System.Drawing.Color.White;
+            deleteUserBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
+            deleteUserBtn.IconColor = System.Drawing.Color.White;
+            deleteUserBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            deleteUserBtn.Location = new System.Drawing.Point(285, 0);
+            deleteUserBtn.Name = "deleteUserBtn";
+            deleteUserBtn.Size = new System.Drawing.Size(95, 112);
+            deleteUserBtn.TabIndex = 3;
+            deleteUserBtn.Text = "Delete User";
+            deleteUserBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            deleteUserBtn.UseVisualStyleBackColor = true;
+            deleteUserBtn.Click += new System.EventHandler(this.deleteUserBtn_Click);
             // 
-            // updateClientBtn
+            // updateUserBtn
             // 
-            updateClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            updateClientBtn.FlatAppearance.BorderSize = 0;
-            updateClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            updateClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            updateClientBtn.ForeColor = System.Drawing.Color.White;
-            updateClientBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            updateClientBtn.IconColor = System.Drawing.Color.White;
-            updateClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            updateClientBtn.Location = new System.Drawing.Point(190, 0);
-            updateClientBtn.Name = "updateClientBtn";
-            updateClientBtn.Size = new System.Drawing.Size(95, 112);
-            updateClientBtn.TabIndex = 2;
-            updateClientBtn.Text = "Update User";
-            updateClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            updateClientBtn.UseVisualStyleBackColor = true;
+            updateUserBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            updateUserBtn.FlatAppearance.BorderSize = 0;
+            updateUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            updateUserBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            updateUserBtn.ForeColor = System.Drawing.Color.White;
+            updateUserBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            updateUserBtn.IconColor = System.Drawing.Color.White;
+            updateUserBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            updateUserBtn.Location = new System.Drawing.Point(190, 0);
+            updateUserBtn.Name = "updateUserBtn";
+            updateUserBtn.Size = new System.Drawing.Size(95, 112);
+            updateUserBtn.TabIndex = 2;
+            updateUserBtn.Text = "Update User";
+            updateUserBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            updateUserBtn.UseVisualStyleBackColor = true;
+            updateUserBtn.Click += new System.EventHandler(this.updateUserBtn_Click);
             // 
             // panel1
             // 
@@ -101,51 +103,53 @@
             // menuBar
             // 
             this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(79)))));
-            this.menuBar.Controls.Add(deleteClientBtn);
-            this.menuBar.Controls.Add(updateClientBtn);
-            this.menuBar.Controls.Add(this.searchClientBtn);
-            this.menuBar.Controls.Add(this.createClientBtn);
+            this.menuBar.Controls.Add(deleteUserBtn);
+            this.menuBar.Controls.Add(updateUserBtn);
+            this.menuBar.Controls.Add(this.searchUserBtn);
+            this.menuBar.Controls.Add(this.createUserBtn);
             this.menuBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuBar.Location = new System.Drawing.Point(0, 542);
             this.menuBar.Name = "menuBar";
             this.menuBar.Size = new System.Drawing.Size(1044, 112);
             this.menuBar.TabIndex = 5;
             // 
-            // searchClientBtn
+            // searchUserBtn
             // 
-            this.searchClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.searchClientBtn.FlatAppearance.BorderSize = 0;
-            this.searchClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchClientBtn.ForeColor = System.Drawing.Color.White;
-            this.searchClientBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchClientBtn.IconColor = System.Drawing.Color.White;
-            this.searchClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchClientBtn.Location = new System.Drawing.Point(95, 0);
-            this.searchClientBtn.Name = "searchClientBtn";
-            this.searchClientBtn.Size = new System.Drawing.Size(95, 112);
-            this.searchClientBtn.TabIndex = 1;
-            this.searchClientBtn.Text = "Search User";
-            this.searchClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.searchClientBtn.UseVisualStyleBackColor = true;
+            this.searchUserBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.searchUserBtn.FlatAppearance.BorderSize = 0;
+            this.searchUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchUserBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchUserBtn.ForeColor = System.Drawing.Color.White;
+            this.searchUserBtn.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchUserBtn.IconColor = System.Drawing.Color.White;
+            this.searchUserBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchUserBtn.Location = new System.Drawing.Point(95, 0);
+            this.searchUserBtn.Name = "searchUserBtn";
+            this.searchUserBtn.Size = new System.Drawing.Size(95, 112);
+            this.searchUserBtn.TabIndex = 1;
+            this.searchUserBtn.Text = "Search User";
+            this.searchUserBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.searchUserBtn.UseVisualStyleBackColor = true;
+            this.searchUserBtn.Click += new System.EventHandler(this.searchUserBtn_Click);
             // 
-            // createClientBtn
+            // createUserBtn
             // 
-            this.createClientBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.createClientBtn.FlatAppearance.BorderSize = 0;
-            this.createClientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createClientBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createClientBtn.ForeColor = System.Drawing.Color.White;
-            this.createClientBtn.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.createClientBtn.IconColor = System.Drawing.Color.White;
-            this.createClientBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.createClientBtn.Location = new System.Drawing.Point(0, 0);
-            this.createClientBtn.Name = "createClientBtn";
-            this.createClientBtn.Size = new System.Drawing.Size(95, 112);
-            this.createClientBtn.TabIndex = 0;
-            this.createClientBtn.Text = "Create New User";
-            this.createClientBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.createClientBtn.UseVisualStyleBackColor = true;
+            this.createUserBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.createUserBtn.FlatAppearance.BorderSize = 0;
+            this.createUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createUserBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createUserBtn.ForeColor = System.Drawing.Color.White;
+            this.createUserBtn.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.createUserBtn.IconColor = System.Drawing.Color.White;
+            this.createUserBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.createUserBtn.Location = new System.Drawing.Point(0, 0);
+            this.createUserBtn.Name = "createUserBtn";
+            this.createUserBtn.Size = new System.Drawing.Size(95, 112);
+            this.createUserBtn.TabIndex = 0;
+            this.createUserBtn.Text = "Create New User";
+            this.createUserBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.createUserBtn.UseVisualStyleBackColor = true;
+            this.createUserBtn.Click += new System.EventHandler(this.createUserBtn_Click);
             // 
             // Users
             // 
@@ -168,7 +172,7 @@
         private Panel panel1;
         private ListBox usersListBox;
         private Panel menuBar;
-        private FontAwesome.Sharp.IconButton searchClientBtn;
-        private FontAwesome.Sharp.IconButton createClientBtn;
+        private FontAwesome.Sharp.IconButton searchUserBtn;
+        private FontAwesome.Sharp.IconButton createUserBtn;
     }
 }

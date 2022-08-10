@@ -23,5 +23,28 @@ namespace POS_System.Forms
         {
             inventoryListBox.Items.Add(String.Format(stdDetails, "SKU", "Barcode", "Product Name", "Price", "Quantity", "Location"));
         }
+
+        private void createProductBtn_Click(object sender, EventArgs e)
+        {
+            CreateProduct createProduct = new CreateProduct();
+            createProduct.ShowDialog();
+        }
+
+        private void searchProductBtn_Click(object sender, EventArgs e)
+        {
+            SearchProduct searchProduct = new SearchProduct();
+            searchProduct.ShowDialog();
+        }
+
+        private void updateProductBtn_Click(object sender, EventArgs e)
+        {
+            UpdateProduct updateProduct = new UpdateProduct();
+            updateProduct.ShowDialog();
+        }
+
+        private void deleteProductBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

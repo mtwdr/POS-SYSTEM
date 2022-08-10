@@ -29,3 +29,9 @@ C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\Tig
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateClient.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchClient.resources
 C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateClient.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateUser.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchUser.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateUser.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateProduct.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchProduct.resources
+C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateProduct.resources
