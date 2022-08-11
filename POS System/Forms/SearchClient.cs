@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace POS_System.Forms
         public SearchClient()
         {
             InitializeComponent();
+            searchInput.Controls.RemoveAt(0);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -24,18 +26,30 @@ namespace POS_System.Forms
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
+            string server = "localhost";
+            string database = "pos_system";
+            string username = "root";
+            string password = "";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
 
+            MySqlConnection conn = new MySqlConnection(constring);
+            conn.Open();
+
+            string query = "select * from clients where Telephone = '" + searchInput.Value.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                MessageBox.Show("Telephone: " + searchInput.Value.ToString() + "\nLast Name: " + dr["LastName"].ToString() + "\nFirst Name:" + dr["FirstName"].ToString() + "\nCompany: " + dr["Company"].ToString() + "\nAddress: " + dr["Address"].ToString() + "\nEmail: " + dr["Email"].ToString());
+            }
+            else
+            {
+                MessageBox.Show("Client Not Found");
+            }
         }
 
-        private void searchBy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IList<string> lstString = new List<string>();
-            lstString.Add("Last Name");
-            lstString.Add("First Name");
-            lstString.Add("Company");
-            lstString.Add("Telephone");
-            lstString.Add("Email");
-            label2.Text = lstString[searchBy.SelectedIndex];
-        }
+      
     }
 }

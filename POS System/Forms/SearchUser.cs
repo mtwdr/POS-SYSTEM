@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace POS_System.Forms
         public SearchUser()
         {
             InitializeComponent();
+            searchInput.Controls.RemoveAt(0);
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -25,6 +27,27 @@ namespace POS_System.Forms
         private void searchBtn_Click(object sender, EventArgs e)
         {
 
+            string server = "localhost";
+            string database = "pos_system";
+            string username = "root";
+            string password = "";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+            conn.Open();
+
+            string query = "select * from users where ID = '" + searchInput.Value.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                MessageBox.Show("ID: " + searchInput.Value.ToString() + "\nLast Name: "+  dr["lname"].ToString() + "\nFirst Name:" + dr["fname"].ToString() + "\nPassword: " + dr["password"].ToString() + "\nUser Type: " + dr["usertype"].ToString());
+            } else
+            {
+                MessageBox.Show("User Not Found");
+            }
         }
     }
 }

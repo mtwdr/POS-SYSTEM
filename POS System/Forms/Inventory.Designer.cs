@@ -31,13 +31,14 @@
             FontAwesome.Sharp.IconButton deleteProductBtn;
             FontAwesome.Sharp.IconButton updateProductBtn;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.inventoryListBox = new System.Windows.Forms.ListBox();
+            this.inventoryView = new System.Windows.Forms.DataGridView();
             this.menuBar = new System.Windows.Forms.Panel();
             this.searchProductBtn = new FontAwesome.Sharp.IconButton();
             this.createProductBtn = new FontAwesome.Sharp.IconButton();
             deleteProductBtn = new FontAwesome.Sharp.IconButton();
             updateProductBtn = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryView)).BeginInit();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.inventoryListBox);
+            this.panel1.Controls.Add(this.inventoryView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -89,16 +90,17 @@
             this.panel1.Size = new System.Drawing.Size(1044, 542);
             this.panel1.TabIndex = 6;
             // 
-            // inventoryListBox
+            // inventoryView
             // 
-            this.inventoryListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inventoryListBox.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inventoryListBox.FormattingEnabled = true;
-            this.inventoryListBox.ItemHeight = 24;
-            this.inventoryListBox.Location = new System.Drawing.Point(10, 10);
-            this.inventoryListBox.Name = "inventoryListBox";
-            this.inventoryListBox.Size = new System.Drawing.Size(1024, 522);
-            this.inventoryListBox.TabIndex = 0;
+            this.inventoryView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.inventoryView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.inventoryView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inventoryView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inventoryView.Location = new System.Drawing.Point(10, 10);
+            this.inventoryView.Name = "inventoryView";
+            this.inventoryView.RowTemplate.Height = 25;
+            this.inventoryView.Size = new System.Drawing.Size(1024, 522);
+            this.inventoryView.TabIndex = 0;
             // 
             // menuBar
             // 
@@ -162,6 +164,7 @@
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryView)).EndInit();
             this.menuBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -170,9 +173,9 @@
         #endregion
 
         private Panel panel1;
-        private ListBox inventoryListBox;
         private Panel menuBar;
         private FontAwesome.Sharp.IconButton searchProductBtn;
         private FontAwesome.Sharp.IconButton createProductBtn;
+        private DataGridView inventoryView;
     }
 }

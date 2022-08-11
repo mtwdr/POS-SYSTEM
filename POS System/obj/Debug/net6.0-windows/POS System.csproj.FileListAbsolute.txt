@@ -1,37 +1,51 @@
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\POS System.exe
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\POS System.deps.json
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\POS System.runtimeconfig.json
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\POS System.dll
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\POS System.pdb
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.csproj.AssemblyReference.cache
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.csproj.GenerateResource.cache
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.AssemblyInfoInputs.cache
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.AssemblyInfo.cs
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.csproj.CoreCompileInputs.cache
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.dll
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\refint\POS System.dll
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.pdb
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.genruntimeconfig.cache
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\ref\POS System.dll
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Login.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Properties.Resources.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Dashboard.resources
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS System.csproj.CopyComplete
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CashRegister.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Home.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Inventory.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Orders.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Users.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Clients.resources
-C:\Users\Matthew\source\repos\POS System\POS System\bin\Debug\net6.0-windows\Tiger.Clock.dll
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateClient.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchClient.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateClient.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateUser.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchUser.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateUser.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateProduct.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchProduct.resources
-C:\Users\Matthew\source\repos\POS System\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateProduct.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\POS System.exe
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\POS System.deps.json
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\POS System.runtimeconfig.json
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\POS System.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\POS System.pdb
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\Tiger.Clock.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.csproj.AssemblyReference.cache
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Dashboard.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CashRegister.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Clients.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateClient.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateProduct.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.CreateUser.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Home.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Inventory.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Orders.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchClient.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchProduct.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.SearchUser.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateClient.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateProduct.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.UpdateUser.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Forms.Users.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Login.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Properties.Resources.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.csproj.GenerateResource.cache
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.AssemblyInfoInputs.cache
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.AssemblyInfo.cs
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.csproj.CopyComplete
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\refint\POS System.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.pdb
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.genruntimeconfig.cache
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\ref\POS System.dll

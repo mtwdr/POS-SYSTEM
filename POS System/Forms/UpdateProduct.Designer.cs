@@ -33,9 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.locationInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.quantityInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.priceInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.productnameInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +42,12 @@
             this.skuInput = new System.Windows.Forms.TextBox();
             this.updateBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
+            this.quantityInput = new System.Windows.Forms.NumericUpDown();
+            this.priceInput = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceInput)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,12 +62,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.priceInput);
+            this.panel2.Controls.Add(this.quantityInput);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.locationInput);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.quantityInput);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.priceInput);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.productnameInput);
             this.panel2.Controls.Add(this.label2);
@@ -104,13 +106,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Quantity";
             // 
-            // quantityInput
-            // 
-            this.quantityInput.Location = new System.Drawing.Point(130, 124);
-            this.quantityInput.Name = "quantityInput";
-            this.quantityInput.Size = new System.Drawing.Size(244, 23);
-            this.quantityInput.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -120,13 +115,6 @@
             this.label4.Size = new System.Drawing.Size(47, 21);
             this.label4.TabIndex = 12;
             this.label4.Text = "Price";
-            // 
-            // priceInput
-            // 
-            this.priceInput.Location = new System.Drawing.Point(130, 95);
-            this.priceInput.Name = "priceInput";
-            this.priceInput.Size = new System.Drawing.Size(244, 23);
-            this.priceInput.TabIndex = 11;
             // 
             // label3
             // 
@@ -159,6 +147,7 @@
             // 
             this.barcodeInput.Location = new System.Drawing.Point(130, 38);
             this.barcodeInput.Name = "barcodeInput";
+            this.barcodeInput.ReadOnly = true;
             this.barcodeInput.Size = new System.Drawing.Size(244, 23);
             this.barcodeInput.TabIndex = 7;
             // 
@@ -176,6 +165,7 @@
             // 
             this.skuInput.Location = new System.Drawing.Point(130, 9);
             this.skuInput.Name = "skuInput";
+            this.skuInput.ReadOnly = true;
             this.skuInput.Size = new System.Drawing.Size(244, 23);
             this.skuInput.TabIndex = 0;
             // 
@@ -207,6 +197,53 @@
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // quantityInput
+            // 
+            this.quantityInput.InterceptArrowKeys = false;
+            this.quantityInput.Location = new System.Drawing.Point(130, 124);
+            this.quantityInput.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.quantityInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.quantityInput.Name = "quantityInput";
+            this.quantityInput.Size = new System.Drawing.Size(244, 23);
+            this.quantityInput.TabIndex = 25;
+            this.quantityInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // priceInput
+            // 
+            this.priceInput.DecimalPlaces = 2;
+            this.priceInput.InterceptArrowKeys = false;
+            this.priceInput.Location = new System.Drawing.Point(130, 95);
+            this.priceInput.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.priceInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.priceInput.Name = "priceInput";
+            this.priceInput.Size = new System.Drawing.Size(244, 23);
+            this.priceInput.TabIndex = 26;
+            this.priceInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // UpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -218,9 +255,12 @@
             this.Name = "UpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdateProduct";
+            this.Load += new System.EventHandler(this.UpdateProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,9 +272,7 @@
         private Label label6;
         private TextBox locationInput;
         private Label label5;
-        private TextBox quantityInput;
         private Label label4;
-        private TextBox priceInput;
         private Label label3;
         private TextBox productnameInput;
         private Label label2;
@@ -243,5 +281,7 @@
         private TextBox skuInput;
         private Button updateBtn;
         private Button backBtn;
+        private NumericUpDown quantityInput;
+        private NumericUpDown priceInput;
     }
 }

@@ -30,10 +30,10 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.telephoneInput = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.emailInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.telephoneInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.addressInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneInput)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,10 +62,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.telephoneInput);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.emailInput);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.telephoneInput);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.addressInput);
             this.panel2.Controls.Add(this.label3);
@@ -77,6 +78,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(376, 394);
             this.panel2.TabIndex = 9;
+            // 
+            // telephoneInput
+            // 
+            this.telephoneInput.InterceptArrowKeys = false;
+            this.telephoneInput.Location = new System.Drawing.Point(105, 124);
+            this.telephoneInput.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.telephoneInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.telephoneInput.Name = "telephoneInput";
+            this.telephoneInput.Size = new System.Drawing.Size(256, 23);
+            this.telephoneInput.TabIndex = 21;
+            this.telephoneInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -104,13 +128,6 @@
             this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 14;
             this.label5.Text = "Telephone";
-            // 
-            // telephoneInput
-            // 
-            this.telephoneInput.Location = new System.Drawing.Point(105, 124);
-            this.telephoneInput.Name = "telephoneInput";
-            this.telephoneInput.Size = new System.Drawing.Size(257, 23);
-            this.telephoneInput.TabIndex = 13;
             // 
             // label4
             // 
@@ -219,9 +236,11 @@
             this.Name = "UpdateClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdateClient";
+            this.Load += new System.EventHandler(this.UpdateClient_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.telephoneInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,7 +252,6 @@
         private Label label6;
         private TextBox emailInput;
         private Label label5;
-        private TextBox telephoneInput;
         private Label label4;
         private TextBox addressInput;
         private Label label3;
@@ -244,5 +262,6 @@
         private TextBox lastnameInput;
         private Button updateBtn;
         private Button backBtn;
+        private NumericUpDown telephoneInput;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace POS_System.Forms
 {
     public partial class Inventory : Form
     {
-        String stdDetails = "{0, -20}{1, -20}{2, -20}{3, -20}{4, -20}{5, -20}";
+        public static string selectedsku = "";
 
         public Inventory()
         {
@@ -21,7 +22,23 @@ namespace POS_System.Forms
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            inventoryListBox.Items.Add(String.Format(stdDetails, "SKU", "Barcode", "Product Name", "Price", "Quantity", "Location"));
+            string server = "localhost";
+            string database = "pos_system";
+            string username = "root";
+            string password = "";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+            conn.Open();
+
+            string query = "select * from inventory";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            inventoryView.DataSource = dt;
         }
 
         private void createProductBtn_Click(object sender, EventArgs e)
@@ -38,13 +55,51 @@ namespace POS_System.Forms
 
         private void updateProductBtn_Click(object sender, EventArgs e)
         {
-            UpdateProduct updateProduct = new UpdateProduct();
-            updateProduct.ShowDialog();
+            if (inventoryView.SelectedCells[0].ColumnIndex.Equals(0))
+            {
+                selectedsku = inventoryView.SelectedCells[0].Value.ToString();
+
+                UpdateProduct updateProduct = new UpdateProduct();
+                updateProduct.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please select the product sku.");
+            }
         }
 
         private void deleteProductBtn_Click(object sender, EventArgs e)
         {
+            if (inventoryView.SelectedCells[0].ColumnIndex.Equals(0))
+            {
+                string server = "localhost";
+                string database = "pos_system";
+                string username = "root";
+                string password = "";
+                string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
 
+                MySqlConnection conn = new MySqlConnection(constring);
+                conn.Open();
+
+                string query = "delete from inventory where Sku=@SKU";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this user?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    cmd.Parameters.AddWithValue("@SKU", inventoryView.SelectedCells[0].Value.ToString());
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    MessageBox.Show("Successfully Deleted");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select the product sku.");
+            }
         }
     }
 }

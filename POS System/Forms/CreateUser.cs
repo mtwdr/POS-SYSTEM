@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace POS_System.Forms
         public CreateUser()
         {
             InitializeComponent();
+            IDInput.Controls.RemoveAt(0);
+            usertypeInput.SelectedIndex = 0;
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -24,6 +27,134 @@ namespace POS_System.Forms
 
         private void createBtn_Click(object sender, EventArgs e)
         {
+            string server = "localhost";
+            string database = "pos_system";
+            string username = "root";
+            string password = "";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+            conn.Open();
+
+            string query = "insert into users values (@ID, @LNAME, @FNAME, @PASSWORD, @USERTYPE)";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            
+            
+
+            if (IDInput.ToString() == string.Empty || lastnameInput.Text == string.Empty || firstnameInput.Text == string.Empty
+                || passwordInput.Text == string.Empty)
+            {
+                MessageBox.Show("Make sure all the fields are filled.");
+
+            } else 
+            {
+                if (usertypeInput.SelectedIndex == 0 && (IDInput.Value > 499 && IDInput.Value < 600)) //MANAGER
+                {
+                    MySqlCommand cmd2 = new MySqlCommand("select * from users where id = '" + IDInput.Value.ToString() + "'", conn);
+                    MySqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        MessageBox.Show("Please enter a different ID.");
+                    } else
+                    {
+                        conn.Close();
+                        conn.Open();
+
+                        cmd.Parameters.AddWithValue("@ID", IDInput.Value.ToString());
+                        cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text);
+                        cmd.Parameters.AddWithValue("@FNAME", firstnameInput.Text);
+                        cmd.Parameters.AddWithValue("@PASSWORD", passwordInput.Text);
+                        cmd.Parameters.AddWithValue("@USERTYPE", usertypeInput.SelectedItem.ToString());
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        MessageBox.Show("Successfully created user.");
+                    }
+
+                } else if (usertypeInput.SelectedIndex == 1 && (IDInput.Value > 399 && IDInput.Value < 500)) //CUSTOMER SERVICE
+                {
+                    MySqlCommand cmd2 = new MySqlCommand("select * from users where id = '" + IDInput.Value.ToString() + "'", conn);
+                    MySqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        MessageBox.Show("Please enter a different ID.");
+                    }
+                    else
+                    {
+                        conn.Close();
+                        conn.Open();
+
+                        cmd.Parameters.AddWithValue("@ID", IDInput.Value.ToString());
+                        cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text);
+                        cmd.Parameters.AddWithValue("@FNAME", firstnameInput.Text);
+                        cmd.Parameters.AddWithValue("@PASSWORD", passwordInput.Text);
+                        cmd.Parameters.AddWithValue("@USERTYPE", usertypeInput.SelectedItem.ToString());
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        MessageBox.Show("Successfully created user.");
+                    }
+
+                } else if (usertypeInput.SelectedIndex == 2 && (IDInput.Value > 299 && IDInput.Value < 400)) //CASHIER 
+                {
+                    MySqlCommand cmd2 = new MySqlCommand("select * from users where id = '" + IDInput.Value.ToString() + "'", conn);
+                    MySqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        MessageBox.Show("Please enter a different ID.");
+                    }
+                    else
+                    {
+                        conn.Close();
+                        conn.Open();
+
+                        cmd.Parameters.AddWithValue("@ID", IDInput.Value.ToString());
+                        cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text);
+                        cmd.Parameters.AddWithValue("@FNAME", firstnameInput.Text);
+                        cmd.Parameters.AddWithValue("@PASSWORD", passwordInput.Text);
+                        cmd.Parameters.AddWithValue("@USERTYPE", usertypeInput.SelectedItem.ToString());
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        MessageBox.Show("Successfully created user.");
+                    }
+                } else if (usertypeInput.SelectedIndex == 3 && (IDInput.Value > 199 && IDInput.Value < 300)) //CLERK 
+                {
+                    MySqlCommand cmd2 = new MySqlCommand("select * from users where id = '" + IDInput.Value.ToString() + "'", conn);
+                    MySqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        MessageBox.Show("Please enter a different ID.");
+                    }
+                    else
+                    {
+                        conn.Close();
+                        conn.Open();
+
+                        cmd.Parameters.AddWithValue("@ID", IDInput.Value.ToString());
+                        cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text);
+                        cmd.Parameters.AddWithValue("@FNAME", firstnameInput.Text);
+                        cmd.Parameters.AddWithValue("@PASSWORD", passwordInput.Text);
+                        cmd.Parameters.AddWithValue("@USERTYPE", usertypeInput.SelectedItem.ToString());
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        MessageBox.Show("Successfully created user.");
+                    }
+                } else
+                {
+                    MessageBox.Show("Please enter a valid ID per user type.");
+                }
+
+            }
 
         }
     }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.IDInput = new System.Windows.Forms.NumericUpDown();
+            this.outcomeLabel = new System.Windows.Forms.Label();
+            this.usertypeInput = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.userTypeInput = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.employeeNoInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.passwordInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,20 +40,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lastnameInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.IDInput = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.createBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IDInput)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.IDInput);
+            this.panel2.Controls.Add(this.outcomeLabel);
+            this.panel2.Controls.Add(this.usertypeInput);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.userTypeInput);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.employeeNoInput);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.passwordInput);
             this.panel2.Controls.Add(this.label3);
@@ -61,45 +61,68 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lastnameInput);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.IDInput);
             this.panel2.Location = new System.Drawing.Point(12, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(376, 394);
             this.panel2.TabIndex = 9;
             // 
+            // IDInput
+            // 
+            this.IDInput.InterceptArrowKeys = false;
+            this.IDInput.Location = new System.Drawing.Point(117, 9);
+            this.IDInput.Maximum = new decimal(new int[] {
+            599,
+            0,
+            0,
+            0});
+            this.IDInput.Minimum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.IDInput.Name = "IDInput";
+            this.IDInput.Size = new System.Drawing.Size(256, 23);
+            this.IDInput.TabIndex = 19;
+            this.IDInput.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            // 
+            // outcomeLabel
+            // 
+            this.outcomeLabel.AutoSize = true;
+            this.outcomeLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.outcomeLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.outcomeLabel.ForeColor = System.Drawing.Color.Red;
+            this.outcomeLabel.Location = new System.Drawing.Point(0, 377);
+            this.outcomeLabel.Name = "outcomeLabel";
+            this.outcomeLabel.Size = new System.Drawing.Size(0, 17);
+            this.outcomeLabel.TabIndex = 18;
+            // 
+            // usertypeInput
+            // 
+            this.usertypeInput.DisplayMember = "Manager";
+            this.usertypeInput.FormattingEnabled = true;
+            this.usertypeInput.Items.AddRange(new object[] {
+            "Manager",
+            "Customer Service",
+            "Cashier",
+            "Clerk"});
+            this.usertypeInput.Location = new System.Drawing.Point(116, 125);
+            this.usertypeInput.Name = "usertypeInput";
+            this.usertypeInput.Size = new System.Drawing.Size(257, 23);
+            this.usertypeInput.TabIndex = 17;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(34, 153);
+            this.label6.Location = new System.Drawing.Point(32, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "User Type";
-            // 
-            // userTypeInput
-            // 
-            this.userTypeInput.Location = new System.Drawing.Point(117, 153);
-            this.userTypeInput.Name = "userTypeInput";
-            this.userTypeInput.Size = new System.Drawing.Size(257, 23);
-            this.userTypeInput.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(5, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 21);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Employee No";
-            // 
-            // employeeNoInput
-            // 
-            this.employeeNoInput.Location = new System.Drawing.Point(117, 124);
-            this.employeeNoInput.Name = "employeeNoInput";
-            this.employeeNoInput.Size = new System.Drawing.Size(257, 23);
-            this.employeeNoInput.TabIndex = 13;
             // 
             // label4
             // 
@@ -117,6 +140,7 @@
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.Size = new System.Drawing.Size(257, 23);
             this.passwordInput.TabIndex = 11;
+            this.passwordInput.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -161,13 +185,6 @@
             this.label1.Size = new System.Drawing.Size(27, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "ID";
-            // 
-            // IDInput
-            // 
-            this.IDInput.Location = new System.Drawing.Point(117, 9);
-            this.IDInput.Name = "IDInput";
-            this.IDInput.Size = new System.Drawing.Size(257, 23);
-            this.IDInput.TabIndex = 0;
             // 
             // panel1
             // 
@@ -220,6 +237,7 @@
             this.Text = "CreateUser";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IDInput)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -229,9 +247,6 @@
 
         private Panel panel2;
         private Label label6;
-        private TextBox userTypeInput;
-        private Label label5;
-        private TextBox employeeNoInput;
         private Label label4;
         private TextBox passwordInput;
         private Label label3;
@@ -239,9 +254,11 @@
         private Label label2;
         private TextBox lastnameInput;
         private Label label1;
-        private TextBox IDInput;
         private Panel panel1;
         private Button createBtn;
         private Button backBtn;
+        private ComboBox usertypeInput;
+        private Label outcomeLabel;
+        private NumericUpDown IDInput;
     }
 }

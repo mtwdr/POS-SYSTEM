@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,8 @@ namespace POS_System.Forms
 {
     public partial class Users : Form
     {
-        String stdDetails = "{0, -20}{1, -20}{2, -20}{3, -20}{4, -20}{5, -20}";
+
+        public static string selectedid = "";
 
         public Users()
         {
@@ -21,7 +23,23 @@ namespace POS_System.Forms
 
         private void Users_Load(object sender, EventArgs e)
         {
-            usersListBox.Items.Add(String.Format(stdDetails, "ID", "Last Name", "First Name", "Password", "Employee No", "User Type"));
+            string server = "localhost";
+            string database = "pos_system";
+            string username = "root";
+            string password = "";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+            conn.Open();
+
+            string query = "select * from users";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            usersView.DataSource = dt;
         }
 
         private void createUserBtn_Click(object sender, EventArgs e)
@@ -38,12 +56,51 @@ namespace POS_System.Forms
 
         private void updateUserBtn_Click(object sender, EventArgs e)
         {
-            UpdateUser updateUser = new UpdateUser();
-            updateUser.ShowDialog();
+            if (usersView.SelectedCells[0].ColumnIndex.Equals(0))
+            {
+                selectedid = usersView.SelectedCells[0].Value.ToString();
+
+                UpdateUser updateUser = new UpdateUser();
+                updateUser.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Please select the user ID");
+            }
+
         }
         
         private void deleteUserBtn_Click(object sender, EventArgs e)
         {
+            if (usersView.SelectedCells[0].ColumnIndex.Equals(0))
+            {
+                string server = "localhost";
+                string database = "pos_system";
+                string username = "root";
+                string password = "";
+                string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+                MySqlConnection conn = new MySqlConnection(constring);
+                conn.Open();
+
+                string query = "delete from users where ID=@ID";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this user?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    cmd.Parameters.AddWithValue("@ID", usersView.SelectedCells[0].Value.ToString());
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    MessageBox.Show("Successfully Deleted");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select the user ID");
+            }
 
         }
     }

@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.usertypeInput = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.userTypeInput = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.employeeNoInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.passwordInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,10 +48,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.usertypeInput);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.userTypeInput);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.employeeNoInput);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.passwordInput);
             this.panel2.Controls.Add(this.label3);
@@ -67,39 +63,23 @@
             this.panel2.Size = new System.Drawing.Size(376, 394);
             this.panel2.TabIndex = 9;
             // 
+            // usertypeInput
+            // 
+            this.usertypeInput.Location = new System.Drawing.Point(117, 124);
+            this.usertypeInput.Name = "usertypeInput";
+            this.usertypeInput.ReadOnly = true;
+            this.usertypeInput.Size = new System.Drawing.Size(257, 23);
+            this.usertypeInput.TabIndex = 17;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(34, 153);
+            this.label6.Location = new System.Drawing.Point(32, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "User Type";
-            // 
-            // userTypeInput
-            // 
-            this.userTypeInput.Location = new System.Drawing.Point(117, 153);
-            this.userTypeInput.Name = "userTypeInput";
-            this.userTypeInput.Size = new System.Drawing.Size(257, 23);
-            this.userTypeInput.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(5, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 21);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Employee No";
-            // 
-            // employeeNoInput
-            // 
-            this.employeeNoInput.Location = new System.Drawing.Point(117, 124);
-            this.employeeNoInput.Name = "employeeNoInput";
-            this.employeeNoInput.Size = new System.Drawing.Size(257, 23);
-            this.employeeNoInput.TabIndex = 13;
             // 
             // label4
             // 
@@ -166,6 +146,7 @@
             // 
             this.IDInput.Location = new System.Drawing.Point(117, 9);
             this.IDInput.Name = "IDInput";
+            this.IDInput.ReadOnly = true;
             this.IDInput.Size = new System.Drawing.Size(257, 23);
             this.IDInput.TabIndex = 0;
             // 
@@ -218,6 +199,7 @@
             this.Name = "UpdateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdateUser";
+            this.Load += new System.EventHandler(this.UpdateUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -229,9 +211,6 @@
 
         private Panel panel2;
         private Label label6;
-        private TextBox userTypeInput;
-        private Label label5;
-        private TextBox employeeNoInput;
         private Label label4;
         private TextBox passwordInput;
         private Label label3;
@@ -243,5 +222,6 @@
         private Panel panel1;
         private Button updateBtn;
         private Button backBtn;
+        private TextBox usertypeInput;
     }
 }

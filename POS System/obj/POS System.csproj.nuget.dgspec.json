@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\POS System.csproj": {}
+    "C:\\Users\\Matthew\\source\\repos\\POS-SYSTEM\\POS System\\POS System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\POS System.csproj": {
+    "C:\\Users\\Matthew\\source\\repos\\POS-SYSTEM\\POS System\\POS System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\POS System.csproj",
+        "projectUniqueName": "C:\\Users\\Matthew\\source\\repos\\POS-SYSTEM\\POS System\\POS System.csproj",
         "projectName": "POS System",
-        "projectPath": "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\POS System.csproj",
+        "projectPath": "C:\\Users\\Matthew\\source\\repos\\POS-SYSTEM\\POS System\\POS System.csproj",
         "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew\\source\\repos\\POS System\\POS System\\obj\\",
+        "outputPath": "C:\\Users\\Matthew\\source\\repos\\POS-SYSTEM\\POS System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[6.1.1, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            },
             "Tiger.Clock": {
               "target": "Package",
               "version": "[2.0.0, )"
@@ -55,7 +63,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -67,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

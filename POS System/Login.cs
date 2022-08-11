@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace POS_System
 {
     public partial class Login : Form
     {
+        
+
         public Login()
         {
             InitializeComponent();
@@ -29,27 +32,37 @@ namespace POS_System
             Application.Exit();
         }
 
-        private void username_Input_Click(object sender, EventArgs e)
-        {
-            username_Input.BackColor = Color.White;
-            panel3.BackColor = Color.White;
-            panel4.BackColor = SystemColors.Control;
-            password_Input.BackColor = SystemColors.Control;
-        }
-
-        private void password_Input_Click(object sender, EventArgs e)
-        {
-            password_Input.BackColor = Color.White;
-            panel4.BackColor = Color.White;
-            panel3.BackColor = SystemColors.Control;
-            username_Input.BackColor = SystemColors.Control;
-        }
-
         private void login_Btn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Dashboard dashboard = new Dashboard();
-            dashboard.ShowDialog();
+            string server = "localhost";
+            string database = "pos_system";
+            string username = "root";
+            string password = "";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+            conn.Open();
+
+            string query = "select * from users where id='" + username_Input.Text + "' and password='" + password_Input.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                conn.Close();
+
+                this.Hide();
+                Dashboard dashboard = new Dashboard();
+                dashboard.ShowDialog();
+
+                Dashboard.user = Int32.Parse(username_Input.Text); //DOESNT WORK 
+
+            } else
+            {
+                MessageBox.Show("Please enter valid credentials");
+            }
+ 
         }
 
         private void Login_MouseDown(object sender, MouseEventArgs e)

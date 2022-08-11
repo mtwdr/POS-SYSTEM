@@ -7,6 +7,8 @@ namespace POS_System
     {
         private Form activeForm;
 
+        public static int user;
+
         public Dashboard()
         {
             InitializeComponent();
@@ -15,10 +17,36 @@ namespace POS_System
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
+            if (user <= 500) //MANAGER ACCESS 
+            {
+                //ACCESS TO EVERYTHING 
+            }
+            else if (user <= 400 && user >= 499) //CUSTOMER SERVICE ACCESS
+            {
+                usersBtn.Enabled = false;
+                clientsBtn.Enabled = false;
+            }
+            else if (user <= 300 && user >= 399) //CASHIER ACCESS
+            {
+                usersBtn.Enabled = false;
+                clientsBtn.Enabled = false;
+                ordersBtn.Enabled = false;
+            }
+            else if (user <= 200 && user >= 299) //CLERK ACCESS
+            {
+                cashBtn.Enabled = false;
+                usersBtn.Enabled = false;
+                clientsBtn.Enabled = false;
+                ordersBtn.Enabled = false;
+                inventoryBtn.Enabled = false;
+            }
+
             activeForm = new Form();
 
             OpenChildForm(new Forms.Home(), activeForm);
             closeForm.Visible = false;
+
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -129,6 +157,5 @@ namespace POS_System
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
     }
 }

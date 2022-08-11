@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.outcomeLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.password_Input = new System.Windows.Forms.TextBox();
@@ -113,6 +114,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.outcomeLabel);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
@@ -124,6 +126,16 @@
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // outcomeLabel
+            // 
+            this.outcomeLabel.AutoSize = true;
+            this.outcomeLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.outcomeLabel.ForeColor = System.Drawing.Color.Red;
+            this.outcomeLabel.Location = new System.Drawing.Point(6, 300);
+            this.outcomeLabel.Name = "outcomeLabel";
+            this.outcomeLabel.Size = new System.Drawing.Size(0, 17);
+            this.outcomeLabel.TabIndex = 19;
             // 
             // button1
             // 
@@ -141,7 +153,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BackColor = System.Drawing.SystemColors.Window;
             this.panel4.Controls.Add(this.password_Input);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(0, 238);
@@ -151,7 +163,7 @@
             // 
             // password_Input
             // 
-            this.password_Input.BackColor = System.Drawing.SystemColors.Control;
+            this.password_Input.BackColor = System.Drawing.SystemColors.Window;
             this.password_Input.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password_Input.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.password_Input.Location = new System.Drawing.Point(36, 11);
@@ -159,7 +171,6 @@
             this.password_Input.Size = new System.Drawing.Size(400, 20);
             this.password_Input.TabIndex = 7;
             this.password_Input.UseSystemPasswordChar = true;
-            this.password_Input.Click += new System.EventHandler(this.password_Input_Click);
             // 
             // pictureBox3
             // 
@@ -190,7 +201,6 @@
             this.username_Input.Name = "username_Input";
             this.username_Input.Size = new System.Drawing.Size(400, 20);
             this.username_Input.TabIndex = 6;
-            this.username_Input.Click += new System.EventHandler(this.username_Input_Click);
             // 
             // pictureBox2
             // 
@@ -273,5 +283,6 @@
         private TextBox username_Input;
         private Label label3;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Label outcomeLabel;
     }
 }

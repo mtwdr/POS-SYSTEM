@@ -31,13 +31,14 @@
             FontAwesome.Sharp.IconButton deleteUserBtn;
             FontAwesome.Sharp.IconButton updateUserBtn;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.usersListBox = new System.Windows.Forms.ListBox();
+            this.usersView = new System.Windows.Forms.DataGridView();
             this.menuBar = new System.Windows.Forms.Panel();
             this.searchUserBtn = new FontAwesome.Sharp.IconButton();
             this.createUserBtn = new FontAwesome.Sharp.IconButton();
             deleteUserBtn = new FontAwesome.Sharp.IconButton();
             updateUserBtn = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersView)).BeginInit();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.usersListBox);
+            this.panel1.Controls.Add(this.usersView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -89,16 +90,23 @@
             this.panel1.Size = new System.Drawing.Size(1044, 542);
             this.panel1.TabIndex = 6;
             // 
-            // usersListBox
+            // usersView
             // 
-            this.usersListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersListBox.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usersListBox.FormattingEnabled = true;
-            this.usersListBox.ItemHeight = 24;
-            this.usersListBox.Location = new System.Drawing.Point(10, 10);
-            this.usersListBox.Name = "usersListBox";
-            this.usersListBox.Size = new System.Drawing.Size(1024, 522);
-            this.usersListBox.TabIndex = 0;
+            this.usersView.AllowUserToAddRows = false;
+            this.usersView.AllowUserToDeleteRows = false;
+            this.usersView.AllowUserToResizeColumns = false;
+            this.usersView.AllowUserToResizeRows = false;
+            this.usersView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.usersView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.usersView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usersView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.usersView.Location = new System.Drawing.Point(10, 10);
+            this.usersView.Name = "usersView";
+            this.usersView.ReadOnly = true;
+            this.usersView.RowTemplate.Height = 25;
+            this.usersView.Size = new System.Drawing.Size(1024, 522);
+            this.usersView.TabIndex = 0;
             // 
             // menuBar
             // 
@@ -162,6 +170,7 @@
             this.Text = "Users";
             this.Load += new System.EventHandler(this.Users_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.usersView)).EndInit();
             this.menuBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -170,9 +179,9 @@
         #endregion
 
         private Panel panel1;
-        private ListBox usersListBox;
         private Panel menuBar;
         private FontAwesome.Sharp.IconButton searchUserBtn;
         private FontAwesome.Sharp.IconButton createUserBtn;
+        private DataGridView usersView;
     }
 }

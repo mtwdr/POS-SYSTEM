@@ -30,10 +30,10 @@
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.logoutBtn = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.usersBtn = new FontAwesome.Sharp.IconButton();
             this.inventoryBtn = new FontAwesome.Sharp.IconButton();
-            this.orderBtn = new FontAwesome.Sharp.IconButton();
+            this.ordersBtn = new FontAwesome.Sharp.IconButton();
+            this.clientsBtn = new FontAwesome.Sharp.IconButton();
             this.cashBtn = new FontAwesome.Sharp.IconButton();
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.imgHome = new System.Windows.Forms.PictureBox();
@@ -54,10 +54,10 @@
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.PanelMenu.Controls.Add(this.logoutBtn);
-            this.PanelMenu.Controls.Add(this.iconButton1);
             this.PanelMenu.Controls.Add(this.usersBtn);
             this.PanelMenu.Controls.Add(this.inventoryBtn);
-            this.PanelMenu.Controls.Add(this.orderBtn);
+            this.PanelMenu.Controls.Add(this.ordersBtn);
+            this.PanelMenu.Controls.Add(this.clientsBtn);
             this.PanelMenu.Controls.Add(this.cashBtn);
             this.PanelMenu.Controls.Add(this.PanelLogo);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -89,29 +89,6 @@
             this.logoutBtn.UseVisualStyleBackColor = true;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 52;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 380);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 60);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.Text = "Users";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.usersBtn_Click);
-            // 
             // usersBtn
             // 
             this.usersBtn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -119,21 +96,21 @@
             this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usersBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.usersBtn.ForeColor = System.Drawing.Color.White;
-            this.usersBtn.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
+            this.usersBtn.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.usersBtn.IconColor = System.Drawing.Color.White;
             this.usersBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.usersBtn.IconSize = 52;
             this.usersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usersBtn.Location = new System.Drawing.Point(0, 320);
+            this.usersBtn.Location = new System.Drawing.Point(0, 380);
             this.usersBtn.Name = "usersBtn";
             this.usersBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.usersBtn.Size = new System.Drawing.Size(220, 60);
-            this.usersBtn.TabIndex = 4;
-            this.usersBtn.Text = "Inventory";
+            this.usersBtn.TabIndex = 5;
+            this.usersBtn.Text = "Users";
             this.usersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.usersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.usersBtn.UseVisualStyleBackColor = true;
-            this.usersBtn.Click += new System.EventHandler(this.inventoryBtn_Click);
+            this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
             // inventoryBtn
             // 
@@ -142,44 +119,67 @@
             this.inventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inventoryBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inventoryBtn.ForeColor = System.Drawing.Color.White;
-            this.inventoryBtn.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.inventoryBtn.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
             this.inventoryBtn.IconColor = System.Drawing.Color.White;
             this.inventoryBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.inventoryBtn.IconSize = 52;
             this.inventoryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inventoryBtn.Location = new System.Drawing.Point(0, 260);
+            this.inventoryBtn.Location = new System.Drawing.Point(0, 320);
             this.inventoryBtn.Name = "inventoryBtn";
             this.inventoryBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.inventoryBtn.Size = new System.Drawing.Size(220, 60);
-            this.inventoryBtn.TabIndex = 3;
-            this.inventoryBtn.Text = "Orders";
+            this.inventoryBtn.TabIndex = 4;
+            this.inventoryBtn.Text = "Inventory";
             this.inventoryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.inventoryBtn.UseVisualStyleBackColor = true;
-            this.inventoryBtn.Click += new System.EventHandler(this.orderBtn_Click);
+            this.inventoryBtn.Click += new System.EventHandler(this.inventoryBtn_Click);
             // 
-            // orderBtn
+            // ordersBtn
             // 
-            this.orderBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.orderBtn.FlatAppearance.BorderSize = 0;
-            this.orderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.orderBtn.ForeColor = System.Drawing.Color.White;
-            this.orderBtn.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            this.orderBtn.IconColor = System.Drawing.Color.White;
-            this.orderBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.orderBtn.IconSize = 52;
-            this.orderBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderBtn.Location = new System.Drawing.Point(0, 200);
-            this.orderBtn.Name = "orderBtn";
-            this.orderBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.orderBtn.Size = new System.Drawing.Size(220, 60);
-            this.orderBtn.TabIndex = 2;
-            this.orderBtn.Text = "Clients";
-            this.orderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.orderBtn.UseVisualStyleBackColor = true;
-            this.orderBtn.Click += new System.EventHandler(this.clientsBtn_Click);
+            this.ordersBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ordersBtn.FlatAppearance.BorderSize = 0;
+            this.ordersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordersBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ordersBtn.ForeColor = System.Drawing.Color.White;
+            this.ordersBtn.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.ordersBtn.IconColor = System.Drawing.Color.White;
+            this.ordersBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ordersBtn.IconSize = 52;
+            this.ordersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ordersBtn.Location = new System.Drawing.Point(0, 260);
+            this.ordersBtn.Name = "ordersBtn";
+            this.ordersBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ordersBtn.Size = new System.Drawing.Size(220, 60);
+            this.ordersBtn.TabIndex = 3;
+            this.ordersBtn.Text = "Orders";
+            this.ordersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ordersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ordersBtn.UseVisualStyleBackColor = true;
+            this.ordersBtn.Click += new System.EventHandler(this.orderBtn_Click);
+            // 
+            // clientsBtn
+            // 
+            this.clientsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.clientsBtn.FlatAppearance.BorderSize = 0;
+            this.clientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clientsBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clientsBtn.ForeColor = System.Drawing.Color.White;
+            this.clientsBtn.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.clientsBtn.IconColor = System.Drawing.Color.White;
+            this.clientsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.clientsBtn.IconSize = 52;
+            this.clientsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clientsBtn.Location = new System.Drawing.Point(0, 200);
+            this.clientsBtn.Name = "clientsBtn";
+            this.clientsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.clientsBtn.Size = new System.Drawing.Size(220, 60);
+            this.clientsBtn.TabIndex = 2;
+            this.clientsBtn.Text = "Clients";
+            this.clientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clientsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.clientsBtn.UseVisualStyleBackColor = true;
+            this.clientsBtn.Click += new System.EventHandler(this.clientsBtn_Click);
             // 
             // cashBtn
             // 
@@ -342,9 +342,9 @@
         private Panel PanelMenu;
         private Panel PanelLogo;
         private PictureBox imgHome;
-        private FontAwesome.Sharp.IconButton usersBtn;
         private FontAwesome.Sharp.IconButton inventoryBtn;
-        private FontAwesome.Sharp.IconButton orderBtn;
+        private FontAwesome.Sharp.IconButton ordersBtn;
+        private FontAwesome.Sharp.IconButton clientsBtn;
         private FontAwesome.Sharp.IconButton cashBtn;
         private Panel panelTitle;
         private Label labelTitle;
@@ -353,7 +353,7 @@
         private Button btnMinimize;
         private Button btnMaximize;
         private Button btnClose;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton usersBtn;
         private FontAwesome.Sharp.IconButton logoutBtn;
     }
 }

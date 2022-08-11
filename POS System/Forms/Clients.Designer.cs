@@ -34,11 +34,12 @@
             this.searchClientBtn = new FontAwesome.Sharp.IconButton();
             this.createClientBtn = new FontAwesome.Sharp.IconButton();
             this.clientsPanel = new System.Windows.Forms.Panel();
-            this.clientListBox = new System.Windows.Forms.ListBox();
+            this.clientsView = new System.Windows.Forms.DataGridView();
             updateClientBtn = new FontAwesome.Sharp.IconButton();
             deleteClientBtn = new FontAwesome.Sharp.IconButton();
             this.menuBar.SuspendLayout();
             this.clientsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsView)).BeginInit();
             this.SuspendLayout();
             // 
             // updateClientBtn
@@ -132,7 +133,7 @@
             // 
             // clientsPanel
             // 
-            this.clientsPanel.Controls.Add(this.clientListBox);
+            this.clientsPanel.Controls.Add(this.clientsView);
             this.clientsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clientsPanel.Location = new System.Drawing.Point(0, 0);
             this.clientsPanel.Name = "clientsPanel";
@@ -140,16 +141,17 @@
             this.clientsPanel.Size = new System.Drawing.Size(1044, 542);
             this.clientsPanel.TabIndex = 4;
             // 
-            // clientListBox
+            // clientsView
             // 
-            this.clientListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clientListBox.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clientListBox.FormattingEnabled = true;
-            this.clientListBox.ItemHeight = 24;
-            this.clientListBox.Location = new System.Drawing.Point(10, 10);
-            this.clientListBox.Name = "clientListBox";
-            this.clientListBox.Size = new System.Drawing.Size(1024, 522);
-            this.clientListBox.TabIndex = 0;
+            this.clientsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientsView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.clientsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientsView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientsView.Location = new System.Drawing.Point(10, 10);
+            this.clientsView.Name = "clientsView";
+            this.clientsView.RowTemplate.Height = 25;
+            this.clientsView.Size = new System.Drawing.Size(1024, 522);
+            this.clientsView.TabIndex = 0;
             // 
             // Clients
             // 
@@ -163,6 +165,7 @@
             this.Load += new System.EventHandler(this.Clients_Load);
             this.menuBar.ResumeLayout(false);
             this.clientsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clientsView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,6 +175,6 @@
         private FontAwesome.Sharp.IconButton createClientBtn;
         private FontAwesome.Sharp.IconButton searchClientBtn;
         private Panel clientsPanel;
-        private ListBox clientListBox;
+        private DataGridView clientsView;
     }
 }

@@ -33,19 +33,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.locationInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.quantityInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.priceInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.productnameInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.barcodeInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.skuInput = new System.Windows.Forms.TextBox();
             this.createBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
+            this.skuInput = new System.Windows.Forms.NumericUpDown();
+            this.barcodeInput = new System.Windows.Forms.NumericUpDown();
+            this.priceInput = new System.Windows.Forms.NumericUpDown();
+            this.quantityInput = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skuInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcodeInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityInput)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,18 +64,18 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.quantityInput);
+            this.panel2.Controls.Add(this.priceInput);
+            this.panel2.Controls.Add(this.barcodeInput);
+            this.panel2.Controls.Add(this.skuInput);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.locationInput);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.quantityInput);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.priceInput);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.productnameInput);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.barcodeInput);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.skuInput);
             this.panel2.Location = new System.Drawing.Point(12, 53);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(376, 394);
@@ -89,7 +93,7 @@
             // 
             // locationInput
             // 
-            this.locationInput.Location = new System.Drawing.Point(130, 153);
+            this.locationInput.Location = new System.Drawing.Point(127, 153);
             this.locationInput.Name = "locationInput";
             this.locationInput.Size = new System.Drawing.Size(244, 23);
             this.locationInput.TabIndex = 15;
@@ -104,13 +108,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Quantity";
             // 
-            // quantityInput
-            // 
-            this.quantityInput.Location = new System.Drawing.Point(130, 124);
-            this.quantityInput.Name = "quantityInput";
-            this.quantityInput.Size = new System.Drawing.Size(244, 23);
-            this.quantityInput.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -120,13 +117,6 @@
             this.label4.Size = new System.Drawing.Size(47, 21);
             this.label4.TabIndex = 12;
             this.label4.Text = "Price";
-            // 
-            // priceInput
-            // 
-            this.priceInput.Location = new System.Drawing.Point(130, 95);
-            this.priceInput.Name = "priceInput";
-            this.priceInput.Size = new System.Drawing.Size(244, 23);
-            this.priceInput.TabIndex = 11;
             // 
             // label3
             // 
@@ -140,7 +130,7 @@
             // 
             // productnameInput
             // 
-            this.productnameInput.Location = new System.Drawing.Point(130, 67);
+            this.productnameInput.Location = new System.Drawing.Point(127, 67);
             this.productnameInput.Name = "productnameInput";
             this.productnameInput.Size = new System.Drawing.Size(244, 23);
             this.productnameInput.TabIndex = 9;
@@ -155,13 +145,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Barcode";
             // 
-            // barcodeInput
-            // 
-            this.barcodeInput.Location = new System.Drawing.Point(130, 38);
-            this.barcodeInput.Name = "barcodeInput";
-            this.barcodeInput.Size = new System.Drawing.Size(244, 23);
-            this.barcodeInput.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -171,13 +154,6 @@
             this.label1.Size = new System.Drawing.Size(36, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "Sku";
-            // 
-            // skuInput
-            // 
-            this.skuInput.Location = new System.Drawing.Point(130, 9);
-            this.skuInput.Name = "skuInput";
-            this.skuInput.Size = new System.Drawing.Size(244, 23);
-            this.skuInput.TabIndex = 0;
             // 
             // createBtn
             // 
@@ -207,6 +183,99 @@
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // skuInput
+            // 
+            this.skuInput.InterceptArrowKeys = false;
+            this.skuInput.Location = new System.Drawing.Point(127, 9);
+            this.skuInput.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.skuInput.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.skuInput.Name = "skuInput";
+            this.skuInput.Size = new System.Drawing.Size(244, 23);
+            this.skuInput.TabIndex = 21;
+            this.skuInput.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            // 
+            // barcodeInput
+            // 
+            this.barcodeInput.InterceptArrowKeys = false;
+            this.barcodeInput.Location = new System.Drawing.Point(127, 36);
+            this.barcodeInput.Maximum = new decimal(new int[] {
+            1215752192,
+            23,
+            0,
+            0});
+            this.barcodeInput.Minimum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.barcodeInput.Name = "barcodeInput";
+            this.barcodeInput.Size = new System.Drawing.Size(244, 23);
+            this.barcodeInput.TabIndex = 22;
+            this.barcodeInput.Value = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            // 
+            // priceInput
+            // 
+            this.priceInput.DecimalPlaces = 2;
+            this.priceInput.InterceptArrowKeys = false;
+            this.priceInput.Location = new System.Drawing.Point(127, 95);
+            this.priceInput.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.priceInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.priceInput.Name = "priceInput";
+            this.priceInput.Size = new System.Drawing.Size(244, 23);
+            this.priceInput.TabIndex = 23;
+            this.priceInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // quantityInput
+            // 
+            this.quantityInput.InterceptArrowKeys = false;
+            this.quantityInput.Location = new System.Drawing.Point(127, 125);
+            this.quantityInput.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.quantityInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.quantityInput.Name = "quantityInput";
+            this.quantityInput.Size = new System.Drawing.Size(244, 23);
+            this.quantityInput.TabIndex = 24;
+            this.quantityInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // CreateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -221,6 +290,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skuInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcodeInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,16 +305,16 @@
         private Label label6;
         private TextBox locationInput;
         private Label label5;
-        private TextBox quantityInput;
         private Label label4;
-        private TextBox priceInput;
         private Label label3;
         private TextBox productnameInput;
         private Label label2;
-        private TextBox barcodeInput;
         private Label label1;
-        private TextBox skuInput;
         private Button createBtn;
         private Button backBtn;
+        private NumericUpDown quantityInput;
+        private NumericUpDown priceInput;
+        private NumericUpDown barcodeInput;
+        private NumericUpDown skuInput;
     }
 }
