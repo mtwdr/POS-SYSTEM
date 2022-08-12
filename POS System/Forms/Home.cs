@@ -20,7 +20,7 @@ namespace POS_System.Forms
 
         private void Home_Load(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -36,16 +36,16 @@ namespace POS_System.Forms
 
             if (dr.Read())
             {
-                label2.Text = dr["FirstName"].ToString();
+                label2.Text = dr["FirstName"].ToString(); //changes the welcome text to the first name of the logged in user. 
             }
 
             clock.Text = DateTime.Now.ToString("T");
-            clockTimer.Start();  
+            clockTimer.Start();  //starts the clock at the time of your computer.
         }
 
         private void clockTimer_Tick(object sender, EventArgs e)
         {
-            clock.Text = DateTime.Now.ToString("T");
+            clock.Text = DateTime.Now.ToString("T"); //sets clock 
         }
     }
 }

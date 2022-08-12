@@ -16,18 +16,18 @@ namespace POS_System.Forms
         public SearchUser()
         {
             InitializeComponent();
-            searchInput.Controls.RemoveAt(0);
+            searchInput.Controls.RemoveAt(0); //removes arrows 
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); //closes the application
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
 
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -41,7 +41,7 @@ namespace POS_System.Forms
 
             MySqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.Read())
+            if (dr.Read()) //same search logic
             {
                 MessageBox.Show("ID: " + searchInput.Value.ToString() + "\nLast Name: "+  dr["lname"].ToString() + "\nFirst Name:" + dr["fname"].ToString() + "\nPassword: " + dr["password"].ToString() + "\nUser Type: " + dr["usertype"].ToString());
             } else

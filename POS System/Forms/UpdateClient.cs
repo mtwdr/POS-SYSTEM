@@ -26,7 +26,7 @@ namespace POS_System.Forms
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -36,9 +36,9 @@ namespace POS_System.Forms
             conn.Open();
 
             string query = "update Clients set LastName=@LNAME, FirstName=@FNAME, Company=@COMPANY, Address=@Address, Telephone=@TELEPHONE, Email=@EMAIL where Telephone = '" + Clients.selectedtelephone + "'";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn); //updates in the db 
 
-            cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text);
+            cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text); //same binding logic 
             cmd.Parameters.AddWithValue("@FNAME", firstnameInput.Text);
             cmd.Parameters.AddWithValue("@COMPANY", companyInput.Text);
             cmd.Parameters.AddWithValue("@ADDRESS", addressInput.Text);
@@ -54,9 +54,9 @@ namespace POS_System.Forms
 
         private void UpdateClient_Load(object sender, EventArgs e)
         {
-            telephoneInput.Value = Convert.ToDecimal(Clients.selectedtelephone);
+            telephoneInput.Value = Convert.ToDecimal(Clients.selectedtelephone); //gets global variable for selected telephone 
 
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -72,7 +72,7 @@ namespace POS_System.Forms
 
             if (dr.Read())
             {
-                lastnameInput.Text = dr["LastName"].ToString();
+                lastnameInput.Text = dr["LastName"].ToString(); //populates fields for the user
                 firstnameInput.Text = dr["FirstName"].ToString();
                 addressInput.Text = dr["Address"].ToString();
                 companyInput.Text = dr["Company"].ToString();

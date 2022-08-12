@@ -16,13 +16,13 @@ namespace POS_System.Forms
         public UpdateProduct()
         {
             InitializeComponent();
-            priceInput.Controls.RemoveAt(0);
+            priceInput.Controls.RemoveAt(0); //removes arrows 
             quantityInput.Controls.RemoveAt(0);
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -34,7 +34,7 @@ namespace POS_System.Forms
             string query = "update Inventory set ProductName=@PRODUCTNAME, Price=@PRICE, Quantity=@QUANTITY, Location=@LOCATION where Sku = '" + Inventory.selectedsku + "'";
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
-            cmd.Parameters.AddWithValue("@PRODUCTNAME", productnameInput.Text);
+            cmd.Parameters.AddWithValue("@PRODUCTNAME", productnameInput.Text); //same updating logic 
             cmd.Parameters.AddWithValue("@PRICE", priceInput.Value.ToString());
             cmd.Parameters.AddWithValue("@QUANTITY", quantityInput.ToString());
             cmd.Parameters.AddWithValue("@LOCATION", locationInput.Text);
@@ -72,7 +72,7 @@ namespace POS_System.Forms
 
             if (dr.Read())
             {
-                barcodeInput.Text = dr["Barcode"].ToString();
+                barcodeInput.Text = dr["Barcode"].ToString(); //same updating logic 
                 productnameInput.Text = dr["ProductName"].ToString();
                 priceInput.Value = Convert.ToDecimal(dr["Price"].ToString());
                 quantityInput.Value = Convert.ToDecimal(dr["Quantity"].ToString());

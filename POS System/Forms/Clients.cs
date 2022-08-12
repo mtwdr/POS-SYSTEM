@@ -5,7 +5,7 @@ namespace POS_System.Forms
 {
     public partial class Clients : Form
     {
-        public static string selectedtelephone = "";
+        public static string selectedtelephone = ""; //public string for the selected telephone number by the user.
 
         public Clients()
         {
@@ -15,7 +15,7 @@ namespace POS_System.Forms
 
         private void Clients_Load(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //SAME DB LOGIC
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -28,33 +28,33 @@ namespace POS_System.Forms
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
 
+            DataTable dt = new DataTable(); //populating the data grid view
             da.Fill(dt);
             clientsView.DataSource = dt;
 
-            StyleDataGridView();
+            StyleDataGridView(); //styling the data grid view
         }
 
-        private void createClientBtn_Click(object sender, EventArgs e)
+        private void createClientBtn_Click(object sender, EventArgs e) //opening different form
         {
             CreateClient createClient = new CreateClient();
             createClient.ShowDialog();
         }
 
-        private void searchClientBtn_Click(object sender, EventArgs e)
+        private void searchClientBtn_Click(object sender, EventArgs e) //SAME LOGIC^^
         {
             SearchClient searchClient = new SearchClient();
             searchClient.ShowDialog();
         }
 
-        private void updateClientBtn_Click(object sender, EventArgs e)
+        private void updateClientBtn_Click(object sender, EventArgs e) //SAME LOGIC^^
         {
             
 
             if (clientsView.SelectedCells[0].ColumnIndex.Equals(4))
             {
-                selectedtelephone = clientsView.SelectedCells[0].Value.ToString();
+                selectedtelephone = clientsView.SelectedCells[0].Value.ToString(); //if user is selecting the telephone number.
 
                 UpdateClient updateClient = new UpdateClient();
                 updateClient.ShowDialog();
@@ -67,9 +67,9 @@ namespace POS_System.Forms
 
         private void deleteClientBtn_Click(object sender, EventArgs e)
         {
-            if (clientsView.SelectedCells[0].ColumnIndex.Equals(4))
+            if (clientsView.SelectedCells[0].ColumnIndex.Equals(4)) //SAME LOGIC^^
             {
-                string server = "localhost";
+                string server = "localhost"; //SAME DB LOGIC
                 string database = "pos_system";
                 string username = "root";
                 string password = "";
@@ -82,10 +82,10 @@ namespace POS_System.Forms
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this user?", "Confirmation", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (dialogResult == DialogResult.Yes) //prompts user with yes or no question and then checks if user answered yes or no.
                 {
                     cmd.Parameters.AddWithValue("@TELEPHONE", clientsView.SelectedCells[0].Value.ToString());
-                    cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery(); //execute query 
 
                     conn.Close();
 
@@ -93,13 +93,13 @@ namespace POS_System.Forms
 
                 }
             }
-            else
+            else //if telephone number was not selected
             {
                 MessageBox.Show("Please select the telephone number.");
             }
         }
 
-        void StyleDataGridView()
+        void StyleDataGridView() //styling the datagridview
         {
             clientsView.BorderStyle = BorderStyle.None;
             clientsView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);

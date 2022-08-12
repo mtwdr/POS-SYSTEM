@@ -15,8 +15,8 @@ namespace POS_System.Forms
     {
         public CreateProduct()
         {
-            InitializeComponent();
-            skuInput.Controls.RemoveAt(0);
+            InitializeComponent(); 
+            skuInput.Controls.RemoveAt(0); //removing arrows 
             barcodeInput.Controls.RemoveAt(0);
             priceInput.Controls.RemoveAt(0);
             quantityInput.Controls.RemoveAt(0);
@@ -24,12 +24,12 @@ namespace POS_System.Forms
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); //closes application
         }
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -42,7 +42,7 @@ namespace POS_System.Forms
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
             if (productnameInput.ToString() == string.Empty || locationInput.Text == string.Empty || skuInput.Text == "" || barcodeInput.Text == ""
-                || priceInput.Text == "" || quantityInput.Text == "")
+                || priceInput.Text == "" || quantityInput.Text == "") //checking if fields are empty
             {
                 MessageBox.Show("Make sure all the fields are filled.");
 
@@ -61,14 +61,14 @@ namespace POS_System.Forms
                     conn.Close();
                     conn.Open();
 
-                    cmd.Parameters.AddWithValue("@SKU", skuInput.Value.ToString());
+                    cmd.Parameters.AddWithValue("@SKU", skuInput.Value.ToString()); //binding the values to the parameters
                     cmd.Parameters.AddWithValue("@BARCODE", barcodeInput.Value.ToString());
                     cmd.Parameters.AddWithValue("@PRODUCTNAME", productnameInput.Text);
                     cmd.Parameters.AddWithValue("@PRICE", priceInput.Value.ToString());
                     cmd.Parameters.AddWithValue("@QUANTITY", quantityInput.Value.ToString());
                     cmd.Parameters.AddWithValue("@LOCATION", locationInput.Text);
 
-                    cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery(); //execute
                     conn.Close();
 
                     MessageBox.Show("Successfully added product.");

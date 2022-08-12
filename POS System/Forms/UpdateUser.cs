@@ -25,7 +25,7 @@ namespace POS_System.Forms
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -35,7 +35,7 @@ namespace POS_System.Forms
             conn.Open();
 
             string query = "update Users set LastName=@LNAME, FirstName=@FNAME, Password=@PASSWORD where ID = '" + Users.selectedid + "'";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn); //same updating logic 
 
             cmd.Parameters.AddWithValue("@LNAME", lastnameInput.Text);
             cmd.Parameters.AddWithValue("@FNAME", firstnameInput.Text);
@@ -69,7 +69,7 @@ namespace POS_System.Forms
 
             if (dr.Read())
             {
-                lastnameInput.Text = dr["LastName"].ToString();
+                lastnameInput.Text = dr["LastName"].ToString(); //same updating logic 
                 firstnameInput.Text = dr["FirstName"].ToString();
                 passwordInput.Text = dr["Password"].ToString();
                 usertypeInput.Text = dr["UserType"].ToString();

@@ -23,7 +23,7 @@ namespace POS_System.Forms
 
         private void Users_Load(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //SAME DB LOGIC 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -38,25 +38,25 @@ namespace POS_System.Forms
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
 
-            da.Fill(dt);
+            da.Fill(dt); //POPULATES DATA GRID VIEW
             usersView.DataSource = dt;
 
             StyleDataGridView();
         }
 
-        private void createUserBtn_Click(object sender, EventArgs e)
+        private void createUserBtn_Click(object sender, EventArgs e) //opens appropriate forms 
         {
             CreateUser createUser = new CreateUser();
             createUser.ShowDialog();
         }
 
-        private void searchUserBtn_Click(object sender, EventArgs e)
+        private void searchUserBtn_Click(object sender, EventArgs e) //opens appropriate forms 
         {
             SearchUser searchUser = new SearchUser();
             searchUser.ShowDialog();
         }
 
-        private void updateUserBtn_Click(object sender, EventArgs e)
+        private void updateUserBtn_Click(object sender, EventArgs e) //same update logic as others 
         {
             if (usersView.SelectedCells[0].ColumnIndex.Equals(0))
             {
@@ -71,7 +71,7 @@ namespace POS_System.Forms
 
         }
         
-        private void deleteUserBtn_Click(object sender, EventArgs e)
+        private void deleteUserBtn_Click(object sender, EventArgs e) //same deleting logic as others
         {
             if (usersView.SelectedCells[0].ColumnIndex.Equals(0))
             {
@@ -106,7 +106,7 @@ namespace POS_System.Forms
 
         }
 
-        void StyleDataGridView()
+        void StyleDataGridView() //styling the datagridview
         {
             usersView.BorderStyle = BorderStyle.None;
             usersView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);

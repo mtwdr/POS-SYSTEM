@@ -5,9 +5,9 @@ namespace POS_System
 
     public partial class Dashboard : Form
     {
-        private Form activeForm;
+        private Form activeForm; //private variable for which form is the dashboard currently on.
 
-        public static string user; 
+        public static string user; //public variable to see what kind of user logged in. 
 
         public Dashboard()
         {
@@ -23,37 +23,37 @@ namespace POS_System
             }
             else if (Int32.Parse(user) >= 400 && Int32.Parse(user) <= 499) //CUSTOMER SERVICE ACCESS
             {
-                usersBtn.Visible = false;
+                usersBtn.Visible = false; //hiding the functionalities depending on the user. 
                 clientsBtn.Visible = false;
             }
             else if (Int32.Parse(user) >= 300 && Int32.Parse(user) <= 399) //CASHIER ACCESS
             {
-                usersBtn.Visible = false;
+                usersBtn.Visible = false; //hiding the functionalities depending on the user.
                 clientsBtn.Visible = false;
                 ordersBtn.Visible = false;
             }
             else if (Int32.Parse(user) >= 200 && Int32.Parse(user) <= 299) //CLERK ACCESS
             {
-                cashBtn.Visible = false;
+                cashBtn.Visible = false; //hiding the functionalities depending on the user.
                 usersBtn.Visible = false;
                 clientsBtn.Visible = false;
                 ordersBtn.Visible = false;
             }
 
-            activeForm = new Form();
+            activeForm = new Form(); //new active form.
 
-            OpenChildForm(new Forms.Home(), activeForm);
-            closeForm.Visible = false;
+            OpenChildForm(new Forms.Home(), activeForm); //opens the home form by default.
+            closeForm.Visible = false; //closing the previous form.
 
 
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")] //allows user to move the window arround. 
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void OpenChildForm(Form childForm, object btnSender)
+        private void OpenChildForm(Form childForm, object btnSender) //method to change the active form. 
         {
             if(activeForm != null)
             {
@@ -70,7 +70,7 @@ namespace POS_System
             childForm.Show();
         }
 
-        private void cashBtn_Click(object sender, EventArgs e)
+        private void cashBtn_Click(object sender, EventArgs e) //cash button onclick, opens the cash form, and closes the previous one. 
         {
             labelTitle.Text = "Cash Register";
 
@@ -78,7 +78,7 @@ namespace POS_System
             closeForm.Visible = true;
         }
 
-        private void orderBtn_Click(object sender, EventArgs e)
+        private void orderBtn_Click(object sender, EventArgs e) //order button onclick, opens the order form, and closes the previous one. 
         {
             labelTitle.Text = "Orders";
 
@@ -86,7 +86,7 @@ namespace POS_System
             closeForm.Visible = true;
         }
 
-        private void inventoryBtn_Click(object sender, EventArgs e)
+        private void inventoryBtn_Click(object sender, EventArgs e) //inventory button onclick, opens the inventory form, and closes the previous one. 
         {
             labelTitle.Text = "Inventory";
 
@@ -94,7 +94,7 @@ namespace POS_System
             closeForm.Visible = true;
         }
 
-        private void usersBtn_Click(object sender, EventArgs e)
+        private void usersBtn_Click(object sender, EventArgs e) //users button onclick, opens the user form, and closes the previous one.
         {
             labelTitle.Text = "Users";
 
@@ -103,7 +103,7 @@ namespace POS_System
 
         }
 
-        private void clientsBtn_Click(object sender, EventArgs e)
+        private void clientsBtn_Click(object sender, EventArgs e) //clients button onclick, opens the clients form, and closes the previous one.
         {
             labelTitle.Text = "Clients";
 
@@ -111,7 +111,7 @@ namespace POS_System
             closeForm.Visible = true;
         }
 
-        private void imgHome_Click(object sender, EventArgs e)
+        private void imgHome_Click(object sender, EventArgs e) //logo image button onclick, opens the home form, and closes the previous one.
         {
             labelTitle.Text = "Home";
 
@@ -119,39 +119,39 @@ namespace POS_System
             closeForm.Visible = true;
         }
 
-        private void logoutBtn_Click(object sender, EventArgs e)
+        private void logoutBtn_Click(object sender, EventArgs e) //logout button, logs out the user and opens the login form. 
         {
             this.Hide();
             Login login = new Login();
             login.ShowDialog();
         }
 
-        private void closeForm_Click(object sender, EventArgs e)
+        private void closeForm_Click(object sender, EventArgs e) //close button onclick, opens back the home form. 
         {
             imgHome_Click(sender, e);
             closeForm.Visible = false;
         }
 
-        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e) //allows user to move the window around. 
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e) //closes the application
         {
             Application.Exit();
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void btnMaximize_Click(object sender, EventArgs e) //maximizes the application, WORKS BUT DISABLED BECAUSE OF SCALING ISSUE. 
         {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
+            //if (WindowState == FormWindowState.Normal)
+                //this.WindowState = FormWindowState.Maximized;
+            //else
+                //this.WindowState = FormWindowState.Normal;
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e) //minimizes the application
         {
             this.WindowState = FormWindowState.Minimized;
         }

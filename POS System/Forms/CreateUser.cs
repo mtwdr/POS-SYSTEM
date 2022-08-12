@@ -16,18 +16,18 @@ namespace POS_System.Forms
         public CreateUser()
         {
             InitializeComponent();
-            IDInput.Controls.RemoveAt(0);
-            usertypeInput.SelectedIndex = 0;
+            IDInput.Controls.RemoveAt(0); //removing arrows
+            usertypeInput.SelectedIndex = 0; //setting default value 
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); //closes application
         }
 
         private void createBtn_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -42,14 +42,17 @@ namespace POS_System.Forms
             
 
             if (IDInput.ToString() == string.Empty || lastnameInput.Text == string.Empty || firstnameInput.Text == string.Empty
-                || passwordInput.Text == string.Empty)
+                || passwordInput.Text == string.Empty) //checking if fields are empty
             {
                 MessageBox.Show("Make sure all the fields are filled.");
 
             } else 
             {
+                //checks wat user type they chose and makes them choose an appropriate user id,
+                //for example, if they selected manager they need a user id between 500 and 599
                 if (usertypeInput.SelectedIndex == 0 && (IDInput.Value > 499 && IDInput.Value < 600)) //MANAGER
                 {
+                    //checks if the user id already exists. 
                     MySqlCommand cmd2 = new MySqlCommand("select * from users where id = '" + IDInput.Value.ToString() + "'", conn);
                     MySqlDataReader dr2 = cmd2.ExecuteReader();
 
@@ -72,6 +75,7 @@ namespace POS_System.Forms
 
                         MessageBox.Show("Successfully created user.");
                     }
+
 
                 } else if (usertypeInput.SelectedIndex == 1 && (IDInput.Value > 399 && IDInput.Value < 500)) //CUSTOMER SERVICE
                 {

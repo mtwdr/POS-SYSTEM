@@ -26,7 +26,7 @@ namespace POS_System.Forms
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
+            string server = "localhost"; //same db logic 
             string database = "pos_system";
             string username = "root";
             string password = "";
@@ -40,7 +40,7 @@ namespace POS_System.Forms
 
             MySqlDataReader dr = cmd.ExecuteReader();
 
-            if (dr.Read())
+            if (dr.Read()) //same search logic
             {
                 MessageBox.Show("Sku: " + searchInput.Value.ToString() + "\nBarcode: " + dr["Barcode"].ToString() + "\nProduct Name:" + dr["ProductName"].ToString() + "\nPrice: " + dr["Price"].ToString() + "\nQuantity: " + dr["Quantity"].ToString() + "\nLocation: " + dr["Location"].ToString());
             }
