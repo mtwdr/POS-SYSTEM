@@ -49,3 +49,6 @@ C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\ref
 C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.pdb
 C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS System.genruntimeconfig.cache
 C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\ref\POS System.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\POS_System.Login.fr-CA.resources
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\bin\Debug\net6.0-windows\fr-CA\POS System.resources.dll
+C:\Users\Matthew\source\repos\POS-SYSTEM\POS System\obj\Debug\net6.0-windows\fr-CA\POS System.resources.dll

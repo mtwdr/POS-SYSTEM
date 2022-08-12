@@ -39,6 +39,8 @@ namespace POS_System.Forms
 
             da.Fill(dt);
             inventoryView.DataSource = dt;
+
+            StyleDataGridView();
         }
 
         private void createProductBtn_Click(object sender, EventArgs e)
@@ -100,6 +102,22 @@ namespace POS_System.Forms
             {
                 MessageBox.Show("Please select the product sku.");
             }
+        }
+
+        void StyleDataGridView()
+        {
+            inventoryView.BorderStyle = BorderStyle.None;
+            inventoryView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            inventoryView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 32, 79);
+            inventoryView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            inventoryView.BackgroundColor = Color.FromArgb(30, 30, 30);
+            inventoryView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            inventoryView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            inventoryView.EnableHeadersVisualStyles = false;
+            inventoryView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            inventoryView.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            inventoryView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(37, 37, 38);
+            inventoryView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

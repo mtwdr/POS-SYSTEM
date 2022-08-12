@@ -51,14 +51,16 @@ namespace POS_System
             if (dr.Read())
             {
                 conn.Close();
+            
+                Dashboard.user = username_Input.Text;
 
                 this.Hide();
                 Dashboard dashboard = new Dashboard();
                 dashboard.ShowDialog();
 
-                Dashboard.user = Int32.Parse(username_Input.Text); //DOESNT WORK 
 
-            } else
+            }
+            else
             {
                 MessageBox.Show("Please enter valid credentials");
             }
@@ -81,6 +83,22 @@ namespace POS_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void languageSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (languageSelect.SelectedIndex)
+            {
+                case 0:
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+                    break;
+                case 1:
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fr-CA");
+                    break;
+            }
+
+            this.Controls.Clear();
+            InitializeComponent();
         }
     }
 }

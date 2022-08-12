@@ -40,6 +40,8 @@ namespace POS_System.Forms
 
             da.Fill(dt);
             usersView.DataSource = dt;
+
+            StyleDataGridView();
         }
 
         private void createUserBtn_Click(object sender, EventArgs e)
@@ -102,6 +104,22 @@ namespace POS_System.Forms
                 MessageBox.Show("Please select the user ID");
             }
 
+        }
+
+        void StyleDataGridView()
+        {
+            usersView.BorderStyle = BorderStyle.None;
+            usersView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            usersView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 32, 79);
+            usersView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            usersView.BackgroundColor = Color.FromArgb(30, 30, 30);
+            usersView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            usersView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            usersView.EnableHeadersVisualStyles = false;
+            usersView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            usersView.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            usersView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(37, 37, 38);
+            usersView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }

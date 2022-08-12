@@ -1,13 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace POS_System.Forms
 {
@@ -40,6 +32,8 @@ namespace POS_System.Forms
 
             da.Fill(dt);
             clientsView.DataSource = dt;
+
+            StyleDataGridView();
         }
 
         private void createClientBtn_Click(object sender, EventArgs e)
@@ -103,6 +97,22 @@ namespace POS_System.Forms
             {
                 MessageBox.Show("Please select the telephone number.");
             }
+        }
+
+        void StyleDataGridView()
+        {
+            clientsView.BorderStyle = BorderStyle.None;
+            clientsView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            clientsView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 32, 79);
+            clientsView.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            clientsView.BackgroundColor = Color.FromArgb(30, 30, 30);
+            clientsView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            clientsView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            clientsView.EnableHeadersVisualStyles = false;
+            clientsView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            clientsView.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            clientsView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(37, 37, 38);
+            clientsView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
     }
 }
