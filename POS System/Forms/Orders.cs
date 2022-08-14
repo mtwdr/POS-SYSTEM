@@ -278,5 +278,10 @@ namespace POS_System.Forms
             ViewOrders viewOrders = new ViewOrders();
             viewOrders.ShowDialog();
         }
+
+        private void Orders_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

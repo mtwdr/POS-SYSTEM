@@ -641,6 +641,7 @@
             this.Controls.Add(this.menuBar);
             this.Name = "Orders";
             this.Text = "Orders";
+            this.Load += new System.EventHandler(this.Orders_Load);
             this.menuBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchInput)).EndInit();
