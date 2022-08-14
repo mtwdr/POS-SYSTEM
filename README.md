@@ -1,0 +1,3 @@
+# POS-SYSTEM
+## This is a POS System developped in Windows Forms C#. The database funcationalities are handled by XAMPP and mySQL.
+## Some of the functionalities include: create, reading, updating, deleting on the Users, Inventory and Clients databases. User access controls depending on the user logged in. Cash register system that pulls the products straight from the database, this system has its own CRUD funcionalities. And finally, an order creation system that is able to make 3 different type of bills. This system stores the clients information, all the items, all the quantities of each item and the all the prices at the point of the sale. You can view the orders inside the app.
